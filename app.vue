@@ -1,8 +1,10 @@
 <template>
   <!-- <NuxtLayout :name="layout"> -->
-    <NuxtLayout>
+    <NuxtLayout
+      :name="layout"
+    >
     <v-app
-      theme="dark"
+      :theme="theme.global.name.value"
     >
       <AppHeader />
       <NuxtPage />
@@ -11,6 +13,8 @@
 </template>
 
 <script setup lang="ts">
-  // You might choose this based on an API call or logged-in status
-  const layout = "default";
+  import { useTheme } from 'vuetify';
+  
+  const layout = 'default';
+  const theme = useTheme();
 </script>

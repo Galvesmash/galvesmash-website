@@ -31,7 +31,7 @@ export default defineNuxtPlugin((app) => {
         light: lightTheme
       }
     },
-  })
+  });
 
-  app.vueApp.use(vuetify)
+  app.vueApp.use(vuetify);
 });

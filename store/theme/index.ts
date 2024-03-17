@@ -1,20 +1,18 @@
 import getters from './getters';
 import actions from './actions';
-import mutations from './mutations';
 
 const state = () => ({
-  availableLocales: [
-    'en',
-    'pt-br'
+  availableThemes: [
+    'dark',
+    'light'
   ],
-  defaultLocale: 'en',
-  locale: '',
+  defaultTheme: 'dark',
+  theme: '',
 });
 
 export default {
   namespaced: true,
   state,
   getters,
-  actions,
-  mutations
+  actions
 };
