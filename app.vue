@@ -1,7 +1,10 @@
 <template>
   <!-- <NuxtLayout :name="layout"> -->
     <NuxtLayout>
-    <v-app>
+    <v-app
+      theme="dark"
+    >
+      <AppHeader />
       <NuxtPage />
     </v-app>
   </NuxtLayout>

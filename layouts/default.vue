@@ -1,6 +1,13 @@
 <template>
-  <div>
-    <p>Some default layout content shared across all pages</p>
+  <div class="layout-default">
     <slot />
   </div>
 </template>
+
+<style lang="scss">
+  .layout-default {
+    // 
+  }
+</style>
+
+
