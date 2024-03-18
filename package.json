@@ -24,6 +24,7 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.5.9"
   }

@@ -5,7 +5,7 @@
     dark
     flat
   >
-    Galvesmash
+    {{ $t('general.galvesmash') }}
 
     <v-btn
       color="secondary"
