@@ -3,11 +3,11 @@ export default {
     return state.availableThemes;
   },
 
-  getDefaultTheme: (state: any) => {
+  getDefaultTheme: (state: object) => {
     return state.defaultTheme;
   },
 
-  getTheme: (state: any) => {
-    return state.theme;
+  getCurrentTheme: (state: object) => {
+    return state.currentTheme;
   },
 };

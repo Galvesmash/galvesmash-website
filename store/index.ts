@@ -1,27 +1,7 @@
-// import galvesmash from './galvesmash';
-// import { createStore } from 'vuex';
-
-// export default createStore({
-//   state: {
-//     // 
-//   },
-//   getters: {
-//     // 
-//   },
-//   mutations: {
-//     // 
-//   },
-//   actions: {
-//     // 
-//   },
-//   modules: {
-//     galvesmash,
-//   }
-// });
+import { defineStore } from 'pinia';
 
 import locale from './locale';
 import theme from './theme';
-import { defineStore } from 'pinia';
 
 export const useMainStore = defineStore('main', {
   state: () => ({

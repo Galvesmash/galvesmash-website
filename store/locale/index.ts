@@ -6,8 +6,8 @@ const state = () => ({
     'en',
     'pt-br'
   ],
-  defaultLocale: 'en',
-  locale: '',
+  currentLocale: 'en',
+  defaultLocale: 'en'
 });
 
 export default {

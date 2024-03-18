@@ -8,16 +8,16 @@
     Galvesmash
 
     <v-btn
+      color="secondary"
+      density="compact"
+      :icon="`mdi-weather-${currentTheme == defaultTheme ? 'night' : 'sunny'}`"
       @click="toggleTheme"
-    >
-      Toggle theme
-    </v-btn>
+    />
   </v-toolbar>
 </template>
 
 <script>
   import { useTheme } from 'vuetify';
-  // import { mapGetters, mapMutations } from 'vuex';
   import { useThemeStore } from '~/store';
   import { storeToRefs } from 'pinia';
 
@@ -27,34 +27,31 @@
     setup() {
       const theme = useTheme();
       const themeStore = useThemeStore();
-      const { availableThemes } = storeToRefs(themeStore);
+      const { availableThemes, currentTheme, defaultTheme } = storeToRefs(themeStore);
+      const setCurrentTheme = themeStore.setCurrentTheme;
 
       return {
         availableThemes,
-        setTheme: themeStore.setTheme,
+        currentTheme,
+        defaultTheme,
+        setCurrentTheme,
         theme
       };
     },
 
-    methods: {
-      // ...mapMutations('galvesmash/theme', [
-      //   'setTheme',
-      // ]),
+    created() {
+      this.theme.global.name.value = this.currentTheme;
+    },
 
+    methods: {
       toggleTheme() {
         this.theme.global.name.value = this.theme.global.current.value[this.availableThemes[0]]
           ? this.availableThemes[1]
           : this.availableThemes[0];
 
-        this.setTheme(this.theme.global.name.value);
+        this.setCurrentTheme(this.theme.global.name.value);
       },
     },
-
-    // computed: {
-    //   ...mapGetters('galvesmash/theme', {
-    //     availableThemes: 'getAvailableThemes',
-    //   }),
-    // },
   });
 </script>
 

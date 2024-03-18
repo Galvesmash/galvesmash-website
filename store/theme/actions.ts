@@ -8,7 +8,7 @@ export default {
     this.$reset();
   },
 
-  setTheme(payload: string) {
-    this.theme = payload;
+  setCurrentTheme(payload: string) {
+    this.currentTheme = payload;
   },
 }

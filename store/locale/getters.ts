@@ -7,7 +7,7 @@ export default {
     return state.defaultLocale;
   },
 
-  getLocale: (state: object) => {
-    return state.locale;
+  getCurrentLocale: (state: object) => {
+    return state.currentLocale;
   },
 };

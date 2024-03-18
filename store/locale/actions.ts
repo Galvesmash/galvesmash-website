@@ -12,7 +12,7 @@ export default {
     this.$reset();
   },
 
-  setLocale(payload: string) {
-    this.locale = payload;
+  setCurrentLocale(payload: string) {
+    this.currentLocale = payload;
   },
 }

@@ -6,8 +6,8 @@ const state = () => ({
     'dark',
     'light'
   ],
+  currentTheme: 'dark',
   defaultTheme: 'dark',
-  theme: '',
 });
 
 export default {
