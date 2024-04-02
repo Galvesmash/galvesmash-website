@@ -5,8 +5,6 @@
     <v-app
       :theme="theme.global.name.value"
     >
-      <AppHeader />
-
       <NuxtPage />
     </v-app>
   </NuxtLayout>

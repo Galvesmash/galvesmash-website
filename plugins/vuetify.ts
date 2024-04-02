@@ -1,4 +1,3 @@
-// import this after install `@mdi/font` package
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
@@ -25,7 +24,7 @@ const lightTheme = {
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     theme: {
-      defaultTheme: 'light',
+      defaultTheme: 'dark',
       themes: {
         dark: darkTheme,
         light: lightTheme
