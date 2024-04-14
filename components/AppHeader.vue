@@ -10,8 +10,8 @@
     <v-btn
       color="secondary"
       density="compact"
-      :icon="`mdi-weather-${currentTheme == defaultTheme ? 'night' : 'sunny'}`"
-      @click="toggleTheme"
+      :icon="`mdi-weather-${currentTheme === defaultTheme ? 'night' : 'sunny'}`"
+      @click="toggleTheme()"
     />
   </v-toolbar>
 </template>
@@ -30,27 +30,24 @@
       const { availableThemes, currentTheme, defaultTheme } = storeToRefs(themeStore);
       const setCurrentTheme = themeStore.setCurrentTheme;
 
+      theme.global.name.value = currentTheme.value;
+
+      const toggleTheme = () => {
+        theme.global.name.value = theme.global.current.value[availableThemes.value[0]]
+          ? availableThemes.value[1]
+          : availableThemes.value[0];
+
+        setCurrentTheme(theme.global.name.value);
+      }
+
       return {
         availableThemes,
         currentTheme,
-        defaultTheme,
+        defaultTheme,     
         setCurrentTheme,
-        theme
+        theme,
+        toggleTheme
       };
-    },
-
-    created() {
-      this.theme.global.name.value = this.currentTheme;
-    },
-
-    methods: {
-      toggleTheme() {
-        this.theme.global.name.value = this.theme.global.current.value[this.availableThemes[0]]
-          ? this.availableThemes[1]
-          : this.availableThemes[0];
-
-        this.setCurrentTheme(this.theme.global.name.value);
-      },
     },
   });
 </script>
