@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
   i18n: {
-    vueI18n: './i18n.config.ts',
+    vueI18n: './i18n.config.js',
     locales: ['en', 'pt-br'],
     defaultLocale: 'en',
     detectBrowserLanguage: false
