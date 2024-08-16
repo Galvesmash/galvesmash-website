@@ -1,15 +1,7 @@
 <template>
-  <div class="layout-default">
-    <AppHeader />
+  <div>
+    <app-header />
     
     <slot />
   </div>
 </template>
-
-<style lang="scss">
-  .layout-default {
-    // 
-  }
-</style>
-
-
