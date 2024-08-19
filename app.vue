@@ -56,6 +56,8 @@
   import { useGeneralStore, useThemeStore } from '~/store'
   import { storeToRefs } from 'pinia'
   
+  const DEFAULT_LAYOUT = 'default'
+  
   const theme = useTheme()
   const router = useRouter()
   const generalStore = useGeneralStore()
