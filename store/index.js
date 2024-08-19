@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import general from './general'
 import locale from './locale'
 import theme from './theme'
 
@@ -13,5 +14,6 @@ export const useMainStore = defineStore('main', {
   }),
 });
 
+export const useGeneralStore = defineStore('general', general)
 export const useLocaleStore = defineStore('locale', locale)
 export const useThemeStore = defineStore('theme', theme)

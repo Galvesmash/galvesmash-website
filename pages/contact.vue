@@ -6,6 +6,6 @@
 
 <template>
   <section>
-    <h1 class="text-secondary">Index page</h1>
+    <h1 class="text-secondary">Contact page</h1>
   </section>
 </template>

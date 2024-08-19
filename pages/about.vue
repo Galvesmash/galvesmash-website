@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <section class="px-5 px-md-16">
-    <h1>About page</h1>
+  <section>
+    <h1 class="text-secondary">About page</h1>
   </section>
 </template>

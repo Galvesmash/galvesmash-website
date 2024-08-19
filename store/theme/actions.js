@@ -12,7 +12,7 @@ export default {
     this.currentTheme = payload
   },
 
-  setIsMobileView(payload) {
-    this.isMobileView = payload
+  setCurrentLayout(payload) {
+    this.currentLayout = payload
   }
 }

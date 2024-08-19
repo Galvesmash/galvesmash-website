@@ -7,11 +7,11 @@ export default {
     return state.currentTheme
   },
 
-  getDefaultTheme: (state) => {
-    return state.defaultTheme
+  getAvailableLayouts: (state) => {
+    return state.availableLayouts
   },
 
-  getIsMobileView: (state) => {
-    return state.isMobileView
+  getCurrentLayout: (state) => {
+    return state.currentLayout
   }
 };
