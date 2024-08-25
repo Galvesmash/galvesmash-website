@@ -1,3 +1,45 @@
+<script setup lang="ts">
+  import { useTheme } from 'vuetify'
+  import { useI18n } from 'vue-i18n';
+  import { useGeneralStore, useThemeStore } from '~/store'
+  import { storeToRefs } from 'pinia'
+  
+  const DEFAULT_LAYOUT = 'default'
+  
+  const theme = useTheme()
+  const router = useRouter()
+  const generalStore = useGeneralStore()
+  const themeStore = useThemeStore()
+  const { t } = useI18n();
+  const { drawerMenu, isMobileView } = storeToRefs(generalStore)
+  const { currentLayout, currentTheme } = storeToRefs(themeStore)
+  
+  themeStore.setCurrentLayout('default')
+  themeStore.setCurrentTheme(theme.global.name.value)
+
+  function changeRoute (page = '') {
+    router.push(`/${page}`)
+  }
+
+  function onResize () {
+    let newMobileViewValue = window.innerWidth <= 960
+
+    if (isMobileView.value === newMobileViewValue) return
+
+    generalStore.setIsMobileView(newMobileViewValue)
+  }
+
+  onMounted(() => {
+    onResize()
+
+    window.addEventListener('resize', onResize)
+  })
+
+  onUnmounted(() => {
+    window.removeEventListener('resize', onResize)
+  })
+</script>
+
 <template>
   <NuxtLayout
     :name="currentLayout"
@@ -49,48 +91,6 @@
     </v-app>
   </NuxtLayout>
 </template>
-
-<script setup lang="ts">
-  import { useTheme } from 'vuetify'
-  import { useI18n } from 'vue-i18n';
-  import { useGeneralStore, useThemeStore } from '~/store'
-  import { storeToRefs } from 'pinia'
-  
-  const DEFAULT_LAYOUT = 'default'
-  
-  const theme = useTheme()
-  const router = useRouter()
-  const generalStore = useGeneralStore()
-  const themeStore = useThemeStore()
-  const { t } = useI18n();
-  const { drawerMenu, isMobileView } = storeToRefs(generalStore)
-  const { currentLayout, currentTheme } = storeToRefs(themeStore)
-  
-  themeStore.setCurrentLayout('default')
-  themeStore.setCurrentTheme(theme.global.name.value)
-
-  function changeRoute (page = '') {
-    router.push(`/${page}`)
-  }
-
-  function onResize () {
-    let newMobileViewValue = window.innerWidth <= 960
-
-    if (isMobileView.value === newMobileViewValue) return
-
-    generalStore.setIsMobileView(newMobileViewValue)
-  }
-
-  onMounted(() => {
-    onResize()
-
-    window.addEventListener('resize', onResize)
-  })
-
-  onUnmounted(() => {
-    window.removeEventListener('resize', onResize)
-  })
-</script>
 
 <style lang="scss">
 .v-application {

@@ -13,8 +13,21 @@
     router.push({ path: `/${route}` })
   }
 
+  const smCols = computed(() => projectList.value.length >=2 ? '6' : '12')
+  const mdCols = computed(() => {
+    if (projectList.value.length >=3) return '4'
+
+    return projectList.value.length >=2 ? '6' : '12'
+  })
+
   onMounted(() => {
-    projectStore.setProjectList([])
+    projectStore.setProjectList([
+      {
+        title: 'Breathe',
+        subtitle: 'Unity3D Game',
+        cover: 'breathe-cover.png'
+      }
+    ])
   })
 </script>
 
@@ -24,13 +37,16 @@
 
     <v-row>
       <v-col
-        v-for="(project, index) in 10"
-        :index="index"
+        v-for="(project, index) in projectList"
+        :key="index"
+        :md="mdCols"
+        :sm="smCols"
         cols="12"
-        sm="6"
-        md="4"
       >
         <project-card
+          :cover="project.cover"
+          :subtitle="project.subtitle"
+          :title="project.title"
           @handle-interaction="redirectToRoute()"
         />
       </v-col>

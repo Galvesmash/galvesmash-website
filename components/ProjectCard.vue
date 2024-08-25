@@ -1,20 +1,13 @@
 <script setup lang="ts">
   import { useProjectStore } from '~/store'
+  import type { ProjectObject } from '~/types'
 
   const emit = defineEmits(['handle-interaction'])
   const projectStore = useProjectStore()
 
-  interface Props {
-    image?: string
-    subtitle?: string
-    title?: string
-  }
+  const propsData = defineProps<ProjectObject>()
 
-  const propsData = withDefaults(defineProps<Props>(), {
-    image: 'https://cdn.vuetifyjs.com/docs/images/cards/concert.jpg',
-    subtitle: 'Subtitle',
-    title: 'Title'
-  })
+  const coverImage = computed(() => `_nuxt/assets/${propsData.cover}`)
 
   function cardInteraction() {
     projectStore.setSelectedProject(propsData.title)
@@ -36,7 +29,7 @@
     >
       <v-img
         :class="{ 'opacity-30 filter-blur-5 z-index-10' : isHovering }"
-        :src="propsData.image"
+        :src="coverImage"
         :style="{ transition: 'all .3s' }"
         class="position-absolute top-0"
         cover
@@ -49,7 +42,7 @@
         :style="{ transition: 'all .3s' }"
         class="h-100 justify-center opacity-0 position-relative"
       >
-        <v-card-title class="text-headline-title text-secondary">
+        <v-card-title class="mb-3 text-headline-title text-secondary">
           {{ propsData.title }}
         </v-card-title>
 

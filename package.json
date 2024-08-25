@@ -20,6 +20,7 @@
     "nuxt": "^3.10.3",
     "pinia": "^2.1.7",
     "sass": "^1.72.0",
+    "typescript": "^5.5.4",
     "vue": "^3.4.21"
   },
   "devDependencies": {

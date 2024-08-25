@@ -1,7 +1,9 @@
 import getters from './getters'
 import actions from './actions'
 
-const state = () => ({
+import type { LocaleStore } from '~/types'
+
+const state = (): LocaleStore => ({
   availableLocales: [
     'en',
     'pt-br'
