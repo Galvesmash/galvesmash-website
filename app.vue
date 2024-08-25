@@ -108,12 +108,40 @@
   font-weight: 100 !important;
   letter-spacing: 11px !important;
   line-height: 10px !important;
-
+  
   &-small {
     font-size: 10px !important;
     font-weight: 100 !important;
     letter-spacing: 9px !important;
     line-height: 10px !important;
   }
+
+  &-title {
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    letter-spacing: 9px !important;
+    line-height: 28px !important;
+  }
+  
+  &-subtitle {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    letter-spacing: 4px !important;
+    line-height: 18px !important;
+  }
+}
+
+.z-index {
+  &-10 {  z-index: 10; }
+  &-20 {  z-index: 20; }
+  &-50 {  z-index: 50; }
+  &-100 {  z-index: 100; }
+}
+
+.filter-blur {
+  &-1 {  filter: blur(1px); }
+  &-2 {  filter: blur(2px); }
+  &-5 {  filter: blur(5px); }
+  &-10 {  filter: blur(10px); }
 }
 </style>

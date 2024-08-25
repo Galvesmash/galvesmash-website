@@ -1,3 +1,50 @@
+<script scoped>
+  import { useTheme } from 'vuetify'
+  import { useGeneralStore, useThemeStore } from '~/store'
+  import { storeToRefs } from 'pinia'
+
+  export default defineComponent({
+    name: 'AppHeader',
+
+    setup() {
+      const theme = useTheme()
+      const router = useRouter()
+      const generalStore = useGeneralStore()
+      const themeStore = useThemeStore()
+      const { drawerMenu, isMobileView } = storeToRefs(generalStore)
+      const { availableThemes, currentTheme } = storeToRefs(themeStore)
+
+      const setCurrentTheme = themeStore.setCurrentTheme
+      const setDrawerMenu = generalStore.setDrawerMenu
+
+      theme.global.name.value = currentTheme.value
+
+      const changeRoute = (page = '') => {
+        router.push(`/${page}`)
+      }
+
+      const toggleTheme = () => {
+        theme.global.name.value = theme.global.current.value[availableThemes.value[0]]
+          ? availableThemes.value[1]
+          : availableThemes.value[0]
+
+        setCurrentTheme(theme.global.name.value)
+      }
+
+      return {
+        availableThemes,
+        changeRoute,
+        currentTheme,
+        drawerMenu,
+        isMobileView,
+        setCurrentTheme,
+        setDrawerMenu,
+        toggleTheme
+      }
+    }
+  })
+</script>
+
 <template>
   <v-toolbar
     :height="isMobileView ? 60 : 203"
@@ -62,50 +109,3 @@
     </v-container>
   </v-toolbar>
 </template>
-
-<script scoped>
-  import { useTheme } from 'vuetify'
-  import { useGeneralStore, useThemeStore } from '~/store'
-  import { storeToRefs } from 'pinia'
-
-  export default defineComponent({
-    name: 'AppHeader',
-
-    setup() {
-      const theme = useTheme()
-      const router = useRouter()
-      const generalStore = useGeneralStore()
-      const themeStore = useThemeStore()
-      const { drawerMenu, isMobileView } = storeToRefs(generalStore)
-      const { availableThemes, currentTheme } = storeToRefs(themeStore)
-
-      const setCurrentTheme = themeStore.setCurrentTheme
-      const setDrawerMenu = generalStore.setDrawerMenu
-
-      theme.global.name.value = currentTheme.value
-
-      const changeRoute = (page = '') => {
-        router.push(`/${page}`)
-      }
-
-      const toggleTheme = () => {
-        theme.global.name.value = theme.global.current.value[availableThemes.value[0]]
-          ? availableThemes.value[1]
-          : availableThemes.value[0]
-
-        setCurrentTheme(theme.global.name.value)
-      }
-
-      return {
-        availableThemes,
-        changeRoute,
-        currentTheme,
-        drawerMenu,
-        isMobileView,
-        setCurrentTheme,
-        setDrawerMenu,
-        toggleTheme
-      }
-    }
-  })
-</script>

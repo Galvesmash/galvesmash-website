@@ -4,6 +4,12 @@ export const dark_charcoal = {
   darken1: '#1A1A1A'
 }
 
+export const dark_lavender = {
+  base: '#665486',
+  lighten1: '#8F77BB',
+  darken1: '#4A3D61'
+}
+
 export const light_gray = {
   base: '#D3D3D3',
   lighten1: '#FFFFFF',
@@ -18,6 +24,7 @@ export const pale_violet = {
 
 export default {
   dark_charcoal,
+  dark_lavender,
   light_gray,
   pale_violet
 }

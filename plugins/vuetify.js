@@ -8,7 +8,8 @@ const darkTheme = {
   colors: {
     primary: colors.pale_violet.base,
     secondary: colors.light_gray.base,
-    background: colors.dark_charcoal.base
+    background: colors.dark_charcoal.base,
+    'dark-lavender': colors.dark_lavender.base
   }
 }
 
@@ -17,7 +18,8 @@ const lightTheme = {
   colors: {
     primary: colors.pale_violet.base,
     secondary: colors.dark_charcoal.base,
-    background: colors.light_gray.base
+    background: colors.light_gray.base,
+    'dark-lavender': colors.dark_lavender.base
   }
 }
 

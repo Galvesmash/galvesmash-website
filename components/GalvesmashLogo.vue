@@ -1,3 +1,32 @@
+<script setup lang="ts">
+  import { useTheme } from 'vuetify'
+
+  const theme = useTheme()
+
+  interface Props {
+    color?: string
+    height?: string
+    width?: string
+  }
+
+  const props = withDefaults(defineProps<Props>(), {
+    color: 'rgb(var(--v-theme-secondary))',
+    height: '101',
+    width: '368'
+  })
+
+  const svgColor = computed(() => {
+    if (/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(props.color)) return props.color
+
+    if (theme.global.current.value.colors[props.color]) return `rgb(var(--v-theme-${props.color}))`
+
+    return 'rgb(var(--v-theme-secondary))'
+  })
+  const svgHeight = computed(() => `${props.height}px`)
+  const svgWidth = computed(() => `${props.width}px`)
+</script>
+
+
 <template>
   <svg :width="svgWidth" :height="svgHeight" viewBox="0 0 368 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>68DEC25C-505A-4595-8350-ACFAFE447EB7-386-00000035ADF0EFF8</title>
@@ -29,31 +58,3 @@
     </g>
   </svg>
 </template>
-
-<script setup lang="ts">
-  import { useTheme } from 'vuetify'
-
-  const theme = useTheme()
-
-  interface Props {
-    color?: string
-    height?: string
-    width?: string
-  }
-
-  const props = withDefaults(defineProps<Props>(), {
-    color: 'rgb(var(--v-theme-secondary))',
-    height: '101',
-    width: '368'
-  })
-
-  const svgColor = computed(() => {
-    if (/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(props.color)) return props.color
-
-    if (theme.global.current.value.colors[props.color]) return `rgb(var(--v-theme-${props.color}))`
-
-    return 'rgb(var(--v-theme-secondary))'
-  })
-  const svgHeight = computed(() => `${props.height}px`)
-  const svgWidth = computed(() => `${props.width}px`)
-</script>
