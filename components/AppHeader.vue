@@ -66,9 +66,9 @@
 
             <div class="align-center d-flex position-relative py-1 py-md-0" @click="changeRoute()">
               <div v-if="!isMobileView" class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0">
-                <h2 class="font-italic text-headline text-no-wrap text-secondary text-uppercase w-100">
+                <h6 class="font-italic text-headline text-no-wrap text-secondary text-uppercase w-100">
                   {{ $t('general.headline.gameDeveloper') }}
-                </h2>
+                </h6>
               </div>
 
               <v-app-bar-nav-icon

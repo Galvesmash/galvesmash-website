@@ -7,7 +7,8 @@
 
   const propsData = defineProps<ProjectObject>()
 
-  const coverImage = computed(() => `_nuxt/assets/${propsData.cover}`)
+  const coverImage = computed(() => `_nuxt/assets/images/${propsData.cover}`)
+  const lazyImage = computed(() => `_nuxt/assets/images/lazy-${propsData.cover}`)
 
   function cardInteraction() {
     projectStore.setSelectedProject(propsData.title)
@@ -29,6 +30,7 @@
     >
       <v-img
         :class="{ 'opacity-30 filter-blur-5 z-index-10' : isHovering }"
+        :lazy-src="lazyImage"
         :src="coverImage"
         :style="{ transition: 'all .3s' }"
         class="position-absolute top-0"
@@ -42,7 +44,7 @@
         :style="{ transition: 'all .3s' }"
         class="h-100 justify-center opacity-0 position-relative"
       >
-        <v-card-title class="mb-3 text-headline-title text-secondary">
+        <v-card-title class="mb-3 text-headline-title text-grey-lighten-4">
           {{ propsData.title }}
         </v-card-title>
 
