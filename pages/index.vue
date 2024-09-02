@@ -6,7 +6,7 @@
     layout: 'default'
   })
 
-  const { t } = useI18n();
+  const { t } = useI18n()
   const router = useRouter()
   const projectStore = useProjectStore()
   const { projectList } = storeToRefs(projectStore)

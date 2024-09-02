@@ -1,11 +1,17 @@
 <script setup lang="ts">
+  import { useThemeStore } from '~/store'
+    
   definePageMeta({
-    layout: 'default'
+    layout: 'soon'
   })
+  
+  const themeStore = useThemeStore()
+
+  themeStore.setCurrentLayout('soon')
 </script>
 
 <template>
   <section>
-    <h1 class="text-secondary">About page</h1>
+    <soon-content />
   </section>
 </template>

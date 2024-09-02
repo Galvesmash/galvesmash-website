@@ -1,17 +1,23 @@
 <script setup lang="ts">
   import { useProjectStore } from '~/store'
+  import { useThemeStore } from '~/store'
 
   definePageMeta({
-    layout: 'default'
+    layout: 'soon'
   })
 
   const projectStore = useProjectStore()
-  const { selectedProject } = storeToRefs(projectStore)
+  const themeStore = useThemeStore()
+  // const { selectedProject } = storeToRefs(projectStore)
+
+  themeStore.setCurrentLayout('soon')
+
 </script>
 
 <template>
   <section>
-    <h1 class="text-secondary">Project page</h1>
-    <h2 class="text-secondary">{{ selectedProject }}</h2>
+    <!-- <h2 class="text-secondary">{{ selectedProject }}</h2> -->
+
+    <soon-content />
   </section>
 </template>
