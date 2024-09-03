@@ -16,5 +16,6 @@ export const general = {
   presentation: {
     subtitle: 'Desenvolvedor Frontend com 8 anos de experiência, minha experiência profissional e dedicação me permitem entregar soluções de alta qualidade e contribuir para projetos inovadores.',
     title: 'Gabriel Galves Taliatti'
-  }
+  },
+  soon: 'Em breve'
 }

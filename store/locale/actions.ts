@@ -9,7 +9,7 @@ export default {
     store.availableLocales = [
       'en',
       'pt-br'
-    ];
+    ]
     store.currentLocale = 'en'
     store.defaultLocale = 'en'
   },

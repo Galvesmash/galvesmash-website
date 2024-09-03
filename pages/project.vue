@@ -11,7 +11,6 @@
   // const { selectedProject } = storeToRefs(projectStore)
 
   themeStore.setCurrentLayout('soon')
-
 </script>
 
 <template>

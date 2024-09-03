@@ -1,6 +1,7 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n';
+  import { useI18n } from 'vue-i18n'
   import { useProjectStore } from '~/store'
+  import { useThemeStore } from '~/store'
 
   definePageMeta({
     layout: 'default'
@@ -9,7 +10,10 @@
   const { t } = useI18n()
   const router = useRouter()
   const projectStore = useProjectStore()
+  const themeStore = useThemeStore()
   const { projectList } = storeToRefs(projectStore)
+
+  themeStore.setCurrentLayout('default')
 
   function redirectToRoute(route: string = 'project') {
     router.push({ path: `/${route}` })

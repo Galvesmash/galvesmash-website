@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { useTheme } from 'vuetify'
-  import { useI18n } from 'vue-i18n';
+  import { useI18n } from 'vue-i18n'
   import { useGeneralStore, useThemeStore } from '~/store'
   import { storeToRefs } from 'pinia'
   
@@ -10,7 +10,7 @@
   const router = useRouter()
   const generalStore = useGeneralStore()
   const themeStore = useThemeStore()
-  const { t } = useI18n();
+  const { t } = useI18n()
   const { drawerMenu, isMobileView } = storeToRefs(generalStore)
   const { currentLayout, currentTheme } = storeToRefs(themeStore)
   

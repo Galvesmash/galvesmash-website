@@ -12,4 +12,4 @@ export default {
   getCurrentLayout: (state: ThemeStore) => {
     return state.currentLayout
   }
-};
+}

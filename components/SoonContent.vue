@@ -1,100 +1,36 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n';
+  import { useI18n } from 'vue-i18n'
   import { useGeneralStore } from '~/store'
   
   const { t } = useI18n()
+  const router = useRouter()
   const generalStore = useGeneralStore()
 
   const { isMobileView } = storeToRefs(generalStore)
+
+  const changeRoute = () => {
+    router.push('/')
+  }
 </script>
 
 <template>
   <section class="d-flex justify-center">
-    <div class="align-center d-flex flex-column position-relative py-1 py-md-0">
-      <galvesmash-logo
-        color="secondary"
-        :height="isMobileView ? '52' : '101'"
-        :width="isMobileView ? '140' : '368'"
-      />
+    <responsive-logo @handle-interaction="changeRoute">
+      <template v-slot:before>
+        <div v-if="!isMobileView" class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0">
+          <h6 class="font-italic text-headline text-no-wrap text-secondary text-uppercase w-100">
+            {{ t('general.headline.gameDeveloper') }}
+          </h6>
+        </div>
+      </template>
 
-      <div>
-        <v-hover v-slot="{ isHovering, props }">
-          <v-btn
-            v-bind="props"
-            :color="isHovering ? 'primary' : 'secondary'"
-            :style="{ transition: 'all .3s' }"
-            density="compact"
-            icon="mdi-linkedin"
-            variant="plain"
-          />
-        </v-hover>
+      <template v-slot:after>
+        <social-media-buttons class="mt-3 mb-2"/>
 
-        <v-hover v-slot="{ isHovering, props }">
-          <v-btn
-            v-bind="props"
-            :color="isHovering ? 'primary' : 'secondary'"
-            :style="{ transition: 'all .3s' }"
-            density="compact"
-            icon="mdi-github"
-            variant="plain"
-          />
-        </v-hover>
-
-        <v-hover v-slot="{ isHovering, props }">
-          <v-btn
-            v-bind="props"
-            :color="isHovering ? 'primary' : 'secondary'"
-            :style="{ transition: 'all .3s' }"
-            density="compact"
-            icon="mdi-itch-io"
-            variant="plain"
-          />
-        </v-hover>
-
-        <v-hover v-slot="{ isHovering, props }">
-          <v-btn
-            v-bind="props"
-            :color="isHovering ? 'primary' : 'secondary'"
-            :style="{ transition: 'all .3s' }"
-            density="compact"
-            icon="mdi-behance"
-            variant="plain"
-          />
-        </v-hover>
-
-        <v-hover v-slot="{ isHovering, props }">
-          <v-btn
-            v-bind="props"
-            :color="isHovering ? 'primary' : 'secondary'"
-            :style="{ transition: 'all .3s' }"
-            density="compact"
-            icon="mdi-twitch"
-            variant="plain"
-          />
-        </v-hover>
-
-        <v-hover v-slot="{ isHovering, props }">
-          <v-btn
-            v-bind="props"
-            :color="isHovering ? 'primary' : 'secondary'"
-            :style="{ transition: 'all .3s' }"
-            density="compact"
-            icon="mdi-youtube"
-            variant="plain"
-          />
-        </v-hover>
-
-        <v-hover v-slot="{ isHovering, props }">
-          <v-btn
-            v-bind="props"
-            :color="isHovering ? 'primary' : 'secondary'"
-            :style="{ transition: 'all .3s' }"
-            density="compact"
-            icon="mdi-steam"
-            variant="plain"
-          />
-        </v-hover>
-      </div>
-    </div>
+        <h1 class="mt-16 text-headline-title text-grey-darken-2">
+          {{ t('general.soon').toUpperCase() }}
+        </h1>
+      </template>
+    </responsive-logo>
   </section>
 </template>

@@ -10,7 +10,7 @@
   const coverImage = computed(() => `_nuxt/assets/images/${propsData.cover}`)
   const lazyImage = computed(() => `_nuxt/assets/images/lazy-${propsData.cover}`)
 
-  function cardInteraction() {
+  function handleInteraction() {
     projectStore.setSelectedProject(propsData.title)
 
     emit('handle-interaction')
@@ -26,7 +26,7 @@
       height="300"
       link
       max-width="380"
-      @click="cardInteraction"
+      @click="handleInteraction"
     >
       <v-img
         :class="{ 'opacity-30 filter-blur-5 z-index-10' : isHovering }"

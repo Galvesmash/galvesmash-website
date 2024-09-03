@@ -64,28 +64,24 @@
               {{ $t('general.menu.about') }}
             </v-btn>
 
-            <div class="align-center d-flex position-relative py-1 py-md-0" @click="changeRoute()">
-              <div v-if="!isMobileView" class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0">
-                <h6 class="font-italic text-headline text-no-wrap text-secondary text-uppercase w-100">
-                  {{ $t('general.headline.gameDeveloper') }}
-                </h6>
-              </div>
-
-              <v-app-bar-nav-icon
-                v-else
-                class="mr-3"
-                height="24px"
-                text
-                width="24px"
-                @click.stop="setDrawerMenu(!drawerMenu)"
-              />
-
-              <galvesmash-logo
-                color="secondary"
-                :height="isMobileView ? '52' : '101'"
-                :width="isMobileView ? '140' : '368'"
-              />
-            </div>
+            <responsive-logo @handle-interaction="changeRoute">
+              <template v-slot:before>
+                <div v-if="!isMobileView" class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0">
+                  <h6 class="font-italic text-headline text-no-wrap text-secondary text-uppercase w-100">
+                    {{ $t('general.headline.gameDeveloper') }}
+                  </h6>
+                </div>
+  
+                <v-app-bar-nav-icon
+                  v-else
+                  class="mr-3"
+                  height="24px"
+                  text
+                  width="24px"
+                  @click.stop="setDrawerMenu(!drawerMenu)"
+                />
+              </template>
+            </responsive-logo>
 
             <v-btn
               class="d-none d-md-block font-italic mb-2 ml-md-12 pl-3 pr-1 text-headline"

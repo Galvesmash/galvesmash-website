@@ -1,8 +1,14 @@
-import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import { aliases, fa } from 'vuetify/iconsets/fa'
+import { aliases, fa } from 'vuetify/iconsets/fa-svg'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
 import colors from '../public/colors'
+
+library.add(fas, far, fab)
 
 const darkTheme = {
   dark: true,
@@ -26,6 +32,13 @@ const lightTheme = {
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
+    icons: {
+      defaultSet: 'fa',
+      aliases,
+      sets: {
+        fa
+      }
+    },
     theme: {
       defaultTheme: 'dark',
       themes: {
@@ -35,5 +48,6 @@ export default defineNuxtPlugin((app) => {
     }
   })
 
+  app.vueApp.component('font-awesome-icon', FontAwesomeIcon)
   app.vueApp.use(vuetify)
 })
