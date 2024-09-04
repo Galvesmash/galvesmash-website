@@ -3,76 +3,35 @@
 ## This is a WIP project!
 
 ## About
-Galvesmash website project, made with Vue 3, Nuxt 3 and Vuetify 3.
-Created bt Gabriel Galves Taliatti.
+Galvesmash website project, made with JavaScript, Typescript, Vue 3, Nuxt 3 and Vuetify 3.
+Created by Gabriel Galves Taliatti.
 
 ## GitHub Page
 - Repository: https://github.com/Galvesmash/galvesmash-website
+- - Web: https://galvesmash.github.io/galvesmash-website/#/
 
-## Setup
-Make sure to install the dependencies:
-
-```bash
-# npm
+## Project setup
+```
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+### Development
+```
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```
+or
+```
+npm run serve
 ```
 
-## Production
-Build the application for production:
-
-```bash
-# npm
+### Production
+```
 npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+### Lints and fixes files
 ```
+npm run lint
+```
+
 
