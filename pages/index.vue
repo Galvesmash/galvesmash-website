@@ -49,7 +49,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="ma-0">
+    <!-- <v-row class="ma-0">
       <v-col
         v-for="(project, index) in projectList"
         :key="index"
@@ -65,6 +65,6 @@
           @handle-interaction="redirectToRoute()"
         />
       </v-col>
-    </v-row>
+    </v-row> -->
   </section>
 </template>
