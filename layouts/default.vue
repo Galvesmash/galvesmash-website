@@ -10,7 +10,7 @@
 
 <style lang="scss">
   $footerHeightDesktop: 212px;
-  $footerHeightMobile: 120px;
+  $footerHeightMobile: 140px;
   $headerHeightDesktop: 203px;
   $headerHeightMobile: 60px;
 

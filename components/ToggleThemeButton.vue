@@ -1,9 +1,11 @@
 <script setup lang="ts">
   import { useTheme } from 'vuetify'
-  import { useThemeStore } from '~/store'
+  import { useGeneralStore, useThemeStore } from '~/store'
 
   const theme = useTheme()
+  const generalStore = useGeneralStore()
   const themeStore = useThemeStore()
+  const { isMobileView } = storeToRefs(generalStore)
   const { availableThemes, currentTheme } = storeToRefs(themeStore)
 
   const setCurrentTheme = themeStore.setCurrentTheme
@@ -23,7 +25,7 @@
   <v-hover v-slot="{ isHovering, props }">
     <v-btn
       v-bind="props"
-      :color="isHovering ? 'primary' : 'secondary'"
+      :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
       :icon="`fa-solid fa-${currentTheme === availableThemes[0] ? 'moon' : 'sun'}`"
       :style="{ transition: 'all .3s' }"
       class="opacity-100"

@@ -1,10 +1,18 @@
 
+<script setup lang="ts">
+  import { useGeneralStore } from '~/store'
+  import { storeToRefs } from 'pinia'
+
+  const generalStore = useGeneralStore()
+  const { isMobileView } = storeToRefs(generalStore)
+</script>
+
 <template>
   <section class="d-flex justify-space-evenly w-100">
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
-        :color="isHovering ? 'primary' : 'secondary'"
+        :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
         href="https://linkedin.com/in/galvesmash"
@@ -17,7 +25,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
-        :color="isHovering ? 'primary' : 'secondary'"
+        :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
         href="https://github.com/Galvesmash"
@@ -30,7 +38,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
-        :color="isHovering ? 'primary' : 'secondary'"
+        :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
         href="https://galvesmash.itch.io/"
@@ -43,7 +51,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
-        :color="isHovering ? 'primary' : 'secondary'"
+        :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
         href="https://www.behance.net/galvesmash"
@@ -56,7 +64,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
-        :color="isHovering ? 'primary' : 'secondary'"
+        :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
         href="https://www.twitch.tv/galvesmash"
@@ -69,7 +77,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
-        :color="isHovering ? 'primary' : 'secondary'"
+        :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
         href="https://www.youtube.com/channel/UCnmUOQnQCA5cElOBEwt115w"
@@ -89,7 +97,7 @@
         variant="plain"
       >
         <ko-fi-logo
-          :color="isHovering ? 'primary' : 'secondary'"
+          :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
           height="28"
           width="28"
         />  

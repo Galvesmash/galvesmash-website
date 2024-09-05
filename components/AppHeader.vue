@@ -29,7 +29,7 @@
             <v-hover v-slot="{ isHovering, props }">
               <v-btn
                 v-bind="props"
-                :color="isHovering ? 'primary' : 'secondary'"
+                :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
                 :style="{ transition: 'all .3s' }"
                 class="d-none d-md-block font-italic mb-2 mr-md-12 opacity-100 pl-3 pr-1 text-headline"
                 variant="plain"
@@ -60,7 +60,7 @@
             <v-hover v-slot="{ isHovering, props }">
               <v-btn
                 v-bind="props"
-                :color="isHovering ? 'primary' : 'secondary'"
+                :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
                 :style="{ transition: 'all .3s' }"
                 class="d-none d-md-block font-italic mb-2 ml-md-12 opacity-100 pl-3 pr-1 text-headline"
                 variant="plain"
@@ -73,7 +73,7 @@
         </div>
 
         <div class="align-center d-flex justify-end ml-6 ml-md-0 my-0 my-md-3">
-          <toggle-theme />
+          <toggle-theme-button />
         </div>
       </div>
     </v-container>

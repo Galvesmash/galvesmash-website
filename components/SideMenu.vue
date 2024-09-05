@@ -34,31 +34,23 @@
     <v-divider />
 
     <div class="d-flex flex-column">
-      <v-hover v-slot="{ isHovering, props }">
-        <v-btn
-          v-bind="props"
-          :color="isHovering ? 'primary' : 'secondary'"
-          :style="{ transition: 'all .3s' }"
-          class="font-italic justify-start text-headline-subtitle"
-          variant="text"
-          @click="changeRoute('about')"
-        >
-          {{ t('general.menu.about') }}
-        </v-btn>
-      </v-hover>
+      <v-btn
+        color="secondary"
+        class="font-italic justify-start text-headline-subtitle"
+        variant="text"
+        @click="changeRoute('about')"
+      >
+        {{ t('general.menu.about') }}
+      </v-btn>
 
-      <v-hover v-slot="{ isHovering, props }">
-        <v-btn
-          v-bind="props"
-          :color="isHovering ? 'primary' : 'secondary'"
-          :style="{ transition: 'all .3s' }"
-          class="font-italic justify-start text-headline-subtitle"
-          variant="text"
-          @click="changeRoute('contact')"
-        >
-          {{ t('general.menu.contact') }}
-        </v-btn>
-      </v-hover>
+      <v-btn
+        color="secondary"
+        class="font-italic justify-start text-headline-subtitle"
+        variant="text"
+        @click="changeRoute('contact')"
+      >
+        {{ t('general.menu.contact') }}
+      </v-btn>
     </div>
   </v-navigation-drawer>
 </template>

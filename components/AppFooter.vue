@@ -10,7 +10,7 @@
 
 <template>
   <v-footer
-    :height="isMobileView ? 120 : 212"
+    :height="isMobileView ? 140 : 212"
     class="pa-5"
     color="background"
   >
@@ -27,7 +27,7 @@
           <v-hover v-slot="{ isHovering, props }">
             <v-btn
               v-bind="props"
-              :color="isHovering ? 'primary' : 'secondary'"
+              :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
               :style="{ transition: 'all .3s' }"
               class="mb-1 opacity-100 pa-0 text-capitalize text-headline-footer"
               density="compact"
