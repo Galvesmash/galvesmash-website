@@ -9,6 +9,12 @@ export const general = {
     unity3dDeveloper: "Unity3D developer",
     vuejsDeveloper: "Vue.js developer"
   },
+  footer: {
+    copyright: 'Copyright © 2024 - Galvesmash - All right reserved',
+    madeBy: 'Made by Gabriel Galves Taliatti',
+    designedBy: 'Designed by',
+    tarmann: 'Studiotarmann'
+  },
   menu: {
     about: 'About',
     contact: 'Contact'

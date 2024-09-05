@@ -19,7 +19,7 @@ export const light_gray = {
 export const pale_violet = {
   base: '#B186FF',
   lighten1: '#BE99FF',
-  darken1: '#9471D6'
+  darken1: '#896DDBD'
 }
 
 export default {

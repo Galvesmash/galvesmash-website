@@ -23,7 +23,7 @@ const darkTheme = {
 const lightTheme = {
   dark: false,
   colors: {
-    primary: colors.pale_violet.base,
+    primary: colors.pale_violet.darken1,
     secondary: colors.dark_charcoal.base,
     background: colors.light_gray.base,
     'dark-lavender': colors.dark_lavender.base

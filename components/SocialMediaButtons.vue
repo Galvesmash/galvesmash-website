@@ -90,7 +90,6 @@
       >
         <ko-fi-logo
           :color="isHovering ? 'primary' : 'secondary'"
-          :style="{ transition: 'all .3s' }"
           height="28"
           width="28"
         />  
