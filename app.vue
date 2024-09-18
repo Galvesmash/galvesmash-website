@@ -64,6 +64,13 @@
       line-height: 16px !important;
     }
 
+    &-general {
+      font-size: 15px !important;
+      font-weight: 300 !important;
+      letter-spacing: 2px !important;
+      line-height: 18px !important;
+    }
+
     &-small {
       font-size: 10px !important;
       font-weight: 100 !important;
