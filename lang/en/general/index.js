@@ -20,8 +20,9 @@ export const general = {
     contact: 'Contact'
   },
   presentation: {
-    subtitle: 'Frontend Developer with 8 years of experience, my professional background and dedication enables me to deliver high-quality solutions and contribute to innovative projects.',
-    title: 'Gabriel Galves Taliatti'
+    name: 'Gabriel Galves Taliatti',
+    subtitle: 'My professional background and dedication enables me to deliver high-quality solutions and contribute to innovative projects.',
+    title: 'Frontend Developer with 8+ years of experience.'
   },
   soon: 'Soon'
 }

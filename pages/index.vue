@@ -30,22 +30,34 @@
     projectStore.setProjectList([
       {
         title: 'Breathe',
-        subtitle: 'Unity3D Game',
+        subtitle: 'Unity3D',
         cover: 'cover-breathe.png'
+      },
+      {
+        title: 'Fortune Machine',
+        subtitle: 'Vue.js',
+        cover: 'cover-fortune-machine.png'
+      },
+      {
+        title: 'Fortune Teller',
+        subtitle: 'Vue.js',
+        cover: 'cover-fortune-teller.png'
       }
     ])
   })
 </script>
 
 <template>
-  <section class="pt-8 pt-md-12">
+  <section class="py-8 py-md-12">
     <v-row class="mb-10 mb-md-16 mt-0 mx-0">
       <v-col class="pa-0" cols="12">
-        <h2 class="mb-2 text-capitalize text-h5 text-md-h4 text-secondary">{{ t('general.presentation.title') }}</h2>
+        <h2 class="mb-2 text-capitalize text-h5 text-md-h4 text-secondary">{{ t('general.presentation.name') }}</h2>
+        
+        <h2 class="font-weight-bold mb-2 text-capitalize text-h4 text-md-h3 text-secondary">{{ t('general.headline.frontendDeveloper') }}</h2>
 
-        <h2 class="font-weight-bold mb-6 text-capitalize text-h4 text-md-h3 text-secondary">{{ t('general.headline.frontendDeveloper') }}</h2>
+        <h1 class="mb-6 text-h6 text-md-h5 text-secondary">{{ t('general.presentation.title') }}</h1>
 
-        <h1 class="text-body-1 text-md-h6 text-secondary">{{ t('general.presentation.subtitle') }}</h1>
+        <h3 class="text-body-1 text-md-h6 text-secondary">{{ t('general.presentation.subtitle') }}</h3>
       </v-col>
     </v-row>
 

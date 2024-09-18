@@ -20,8 +20,9 @@ export const general = {
     contact: 'Contato'
   },
   presentation: {
-    subtitle: 'Desenvolvedor Frontend com 8 anos de experiência, minha experiência profissional e dedicação me permitem entregar soluções de alta qualidade e contribuir para projetos inovadores.',
-    title: 'Gabriel Galves Taliatti'
+    name: 'Gabriel Galves Taliatti',
+    subtitle: 'Minha experiência profissional e dedicação me permitem entregar soluções de alta qualidade e contribuir para projetos inovadores.',
+    title: 'Desenvolvedor Frontend com 8+ anos de experiência'
   },
   soon: 'Em breve'
 }
