@@ -21,8 +21,8 @@ export const general = {
   },
   presentation: {
     name: 'Gabriel Galves Taliatti',
-    subtitle: 'My professional background and dedication enables me to deliver high-quality solutions and contribute to innovative projects.',
-    title: 'Frontend Developer with 8+ years of experience.'
+    title: 'Over 8 years developing experiences\nfor web apps and sites.'
   },
+  someProjectsWorked: 'Some projects I’ve worked on',
   soon: 'Soon'
 }

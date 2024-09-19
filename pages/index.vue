@@ -18,7 +18,9 @@
   function redirectToRoute(route: string = 'project') {
     router.push({ path: `/${route}` })
   }
-
+  
+  const coverImage = computed(() => '_nuxt/assets/images/me-small.png')
+  const lazyImage = computed(() => '_nuxt/assets/images/lazy-me-small.png')
   const smCols = computed(() => projectList.value.length >=2 ? '6' : '12')
   const mdCols = computed(() => {
     if (projectList.value.length >=3) return '4'
@@ -48,20 +50,50 @@
 </script>
 
 <template>
-  <section class="py-8 py-md-12">
-    <v-row class="mb-10 mb-md-16 mt-0 mx-0">
-      <v-col class="pa-0" cols="12">
-        <h2 class="mb-2 text-capitalize text-h5 text-md-h4 text-secondary">{{ t('general.presentation.name') }}</h2>
+  <section class="py-12 py-md-16">
+    <v-row class="ma-0 py-10 pt-md-0">
+      <v-col class="d-flex justify-md-end mb-14 mb-md-0 pa-0 pr-md-16" sm="12" md="5" cols="12">
+        <v-img
+          :lazy-src="lazyImage"
+          :src="coverImage"
+          :style="{ filter: 'contrast(0.8)' }"
+          alt="Foto de Gabriel Galves Taliatti"
+          aspect-ratio="1"
+          class="mx-auto mx-md-0"
+          height="100%"
+          max-height="220px"
+          max-width="220px"
+          rounded="circle"
+          width="100%"
+        />
+      </v-col>
+
+      <v-col class="mt-10 mt-md-0 pa-0" sm="12" md="7" cols="12">
+        <h2
+          class="font-weight-thin mb-2 text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
+        >
+          {{ t('general.presentation.name') }}
+        </h2>
         
-        <h2 class="font-weight-bold mb-2 text-capitalize text-h4 text-md-h3 text-secondary">{{ t('general.headline.frontendDeveloper') }}</h2>
+        <h2
+          class="mb-10 text-center text-h4 text-md-h2 text-md-start text-secondary"
+        >
+          <strong class="font-weight-bold text-capitalize">{{ t('general.headline.frontendDeveloper') }}</strong>
+        </h2>
 
-        <h1 class="mb-6 text-h6 text-md-h5 text-secondary">{{ t('general.presentation.title') }}</h1>
-
-        <h3 class="text-body-1 text-md-h6 text-secondary">{{ t('general.presentation.subtitle') }}</h3>
+        <h1
+          :style="{ whiteSpace: 'pre-line' }"
+          class="text-center font-italic text-body-1 text-md-h6 text-md-start text-secondary"
+        >
+          {{ t('general.presentation.title') }}
+        </h1>
       </v-col>
     </v-row>
 
-    <v-row class="ma-0">
+    <v-row class="ma-0 pt-10 pt-md-16">
+      <v-col class="pa-0 mb-6 mb-md-12" cols="12">
+        <p class="text-center text-h6 text-md-h3 text-secondary">{{ t('general.someProjectsWorked') }}:</p>
+      </v-col>
       <v-col
         v-for="(project, index) in projectList"
         :key="index"

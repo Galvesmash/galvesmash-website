@@ -26,6 +26,7 @@
       height="300"
       link
       max-width="380"
+      rounded="lg"
       @click="handleInteraction"
     >
       <v-img
