@@ -44,6 +44,7 @@
               class="mr-5"
               height="24px"
               width="24px"
+              icon="fa-solid fa-bars"
               @click.stop="setDrawerMenu(!drawerMenu)"
             />
 

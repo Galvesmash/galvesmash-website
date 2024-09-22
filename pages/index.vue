@@ -18,7 +18,7 @@
   function redirectToRoute(route: string = 'project') {
     router.push({ path: `/${route}` })
   }
-  
+
   const coverImage = computed(() => '_nuxt/assets/images/me-small.png')
   const lazyImage = computed(() => '_nuxt/assets/images/lazy-me-small.png')
   const smCols = computed(() => projectList.value.length >=2 ? '6' : '12')
@@ -99,7 +99,7 @@
         :key="index"
         :md="mdCols"
         :sm="smCols"
-        class="pa-0"
+        class="pb-2 pt-0 px-1"
         cols="12"
       >
         <project-card

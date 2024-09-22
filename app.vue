@@ -3,14 +3,14 @@
   import { useI18n } from 'vue-i18n'
   import { useGeneralStore, useThemeStore } from '~/store'
   import { storeToRefs } from 'pinia'
-  
+
   const theme = useTheme()
   const generalStore = useGeneralStore()
   const themeStore = useThemeStore()
   const { t } = useI18n()
   const { isMobileView } = storeToRefs(generalStore)
   const { currentLayout, currentTheme } = storeToRefs(themeStore)
-  
+
   themeStore.setCurrentLayout('default')
   themeStore.setCurrentTheme(theme.global.name.value)
 
@@ -93,17 +93,21 @@
     }
   }
 
-  .z-index {
-    &-10 {  z-index: 10; }
-    &-20 {  z-index: 20; }
-    &-50 {  z-index: 50; }
-    &-100 {  z-index: 100; }
-  }
-
   .filter-blur {
     &-1 {  filter: blur(1px); }
     &-2 {  filter: blur(2px); }
     &-5 {  filter: blur(5px); }
     &-10 {  filter: blur(10px); }
+  }
+
+  .v-navigation-drawer__scrim {
+    position: fixed;
+  }
+
+  .z-index {
+    &-10 {  z-index: 10; }
+    &-20 {  z-index: 20; }
+    &-50 {  z-index: 50; }
+    &-100 {  z-index: 100; }
   }
 </style>
