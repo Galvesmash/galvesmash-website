@@ -86,16 +86,16 @@
 </script>
 
 <template>
-  <section class="d-flex justify-space-evenly w-100">
+  <section class="w-100">
     <v-row class="ma-0">
       <v-col
         v-for="(skill, index) in skillList"
-        :key="index" class="mb-2 mb-md-6 pa-0 text-center"
-        color="secondary"
+        :key="index"
+        class="mb-2 mb-md-6 pa-0 text-center"
         cols="3"
         md="2"
       >
-        <v-icon :icon="skill.icon" :size="isMobileView ? 32 : 80" />
+        <v-icon color="secondary" :icon="skill.icon" :size="isMobileView ? 32 : 80" />
 
         <h4 class="text-caption text-md-h6 text-secondary">{{ skill.title }}</h4>
       </v-col>

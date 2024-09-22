@@ -52,7 +52,7 @@
 <template>
   <section class="py-12 py-md-16">
     <v-row class="ma-0 py-10 pt-md-0">
-      <v-col class="d-flex justify-md-end mb-14 mb-md-0 pa-0 pr-md-16" sm="12" md="5" cols="12">
+      <v-col class="d-flex justify-md-end mb-14 mb-md-0 pa-0 pr-md-16" cols="12" md="5">
         <v-img
           :lazy-src="lazyImage"
           :src="coverImage"
@@ -68,7 +68,7 @@
         />
       </v-col>
 
-      <v-col class="mt-10 mt-md-0 pa-0" sm="12" md="7" cols="12">
+      <v-col class="mt-10 mt-md-0 pa-0" cols="12" md="7">
         <h2
           class="font-weight-thin mb-2 text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
         >

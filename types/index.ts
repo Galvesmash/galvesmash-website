@@ -1,3 +1,15 @@
+export interface ExperienceObject {
+  company: string
+  end: string
+  role: string
+  start: string
+  text: string
+}
+
+export interface ExperienceStore {
+  experienceList: ExperienceObject[]
+}
+
 export interface GeneralStore {
   packageVersion: string
   drawerMenu: boolean

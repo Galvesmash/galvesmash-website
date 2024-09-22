@@ -51,15 +51,15 @@
       </v-col>
 
       <v-col class="mt-12 mt-md-16 pa-0" cols="12">
-        <h3 class="mb-6 text-center text-h4 text-md-h3 text-secondary">Skills</h3>
+        <h3 class="mb-6 text-md-center text-h4 text-md-h3 text-secondary">Skills</h3>
 
         <skill-list />
       </v-col>
 
       <v-col class="mt-12 mt-md-16 pa-0" cols="12">
-        <h3 class="mb-6 text-center text-h4 text-md-h3 text-secondary">Experience</h3>
+        <h3 class="mb-6 text-md-center text-h4 text-md-h3 text-secondary">Experience</h3>
 
-        Lista de experiencias
+        <experience-list />
       </v-col>
 
       <v-col class="mt-12 mt-md-16 pa-0" cols="12">
