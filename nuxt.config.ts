@@ -30,14 +30,18 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
-      },
-    },
     server: {
       hmr: {
         overlay: false,
+      },
+    },
+    // @ts-ignore
+    ssr: {
+      noExternal: ["moment"]
+    },
+    vue: {
+      template: {
+        transformAssetUrls,
       },
     },
   },
