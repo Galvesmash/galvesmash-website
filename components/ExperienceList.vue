@@ -10,7 +10,7 @@
     experienceStore.setExperienceList([
       {
         company: 'Atlas Technologies',
-        end: 'now',
+        end: '',
         role: 'Frontend Engineer',
         start: '04-01-2024',
         text: 'Working as a Frontend Engineer with high knowledge in JavaScript, TypeScript, Vue.js, Nuxt, Tailwind CSS, SEO, Jest, Vue-Test-Utils.\nResponsible for developing and the creation of new features in the register part for the main website at Atlas Technologies in Vue.js, JavaScript, TypeScript, Nuxt, Tailwind CSS, Jest, API integration and SEO optimization.'
@@ -82,9 +82,9 @@
           cols="12"
           md="3"
         >
-          <h3 class="text-secondary">{{ experience.role }}</h3>
-          <h4 class="text-secondary">{{ experience.company }}</h4>
-          <p class="text-secondary">{{ moment(experience.start).format('MMM YYYY') }} - {{ moment(experience.end).format('MMM YYYY') }}</p>
+          <h3 class="font-weight-bold text-secondary">{{ experience.role }}</h3>
+          <h4 class="font-weight-bold text-secondary">{{ experience.company }}</h4>
+          <p class="text-caption text-secondary">{{ moment(experience.start).format('MMM YYYY') }} - {{ experience.end ? moment(experience.end).format('MMM YYYY') : 'Present' }}</p>
         </v-col>
 
         <v-col
