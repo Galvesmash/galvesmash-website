@@ -100,6 +100,18 @@
     &-10 {  filter: blur(10px); }
   }
 
+  .v-field-label {
+    text-transform: uppercase;
+    font-size: 14px !important;
+    font-style: italic;
+    letter-spacing: 8.4px !important;
+
+    &--floating {
+      font-size: 10.4px !important;
+      letter-spacing: 6.6px !important;
+    }
+  }
+
   .v-navigation-drawer__scrim {
     position: fixed;
   }

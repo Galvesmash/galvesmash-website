@@ -93,7 +93,7 @@
           cols="12"
           md="9"
         >
-          <p class="mt-0 mt-md-2 text-headline-general text-secondary">{{ experience.text }}</p>
+          <p class="font-italic mt-0 mt-md-2 text-headline-general text-secondary">{{ experience.text }}</p>
         </v-col>
 
         <v-divider v-if="index < experienceList.length - 1" class="my-4 my-md-6" />

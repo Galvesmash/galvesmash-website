@@ -33,19 +33,19 @@
       </v-col>
 
       <v-col class="pa-0 pl-md-12" sm="12" md="8" cols="12">
-        <h2 class="mb-6 text-h4 text-md-h3 text-primary">Nice to meet you!</h2>
+        <h2 class="mb-6 text-h4 text-primary">{{ "Nice to meet you!".toUpperCase() }}</h2>
 
         <about-me />
       </v-col>
 
       <v-col class="mt-12 mt-md-16 pa-0" cols="12">
-        <h3 class="mb-6 text-md-center text-h4 text-md-h3 text-primary">Skills</h3>
+        <h3 class="mb-6 text-md-center text-h4 text-primary">{{ "Skills".toUpperCase() }}</h3>
 
         <skill-list />
       </v-col>
 
       <v-col class="mt-12 mt-md-16 pa-0" cols="12">
-        <h3 class="mb-6 text-md-center text-h4 text-md-h3 text-primary">Experience</h3>
+        <h3 class="mb-6 text-md-center text-h4 text-primary">{{ "Experience".toUpperCase() }}</h3>
 
         <experience-list />
       </v-col>
