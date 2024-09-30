@@ -50,9 +50,9 @@
 </script>
 
 <template>
-  <section class="py-12 py-md-16">
-    <v-row class="ma-0 py-10 pt-md-0">
-      <v-col class="d-flex justify-md-end mb-14 mb-md-0 pa-0 pr-md-16" cols="12" md="5">
+  <section class="py-10 py-md-16">
+    <v-row class="ma-0">
+      <v-col class="d-flex justify-md-end pa-0 pr-md-16" cols="12" md="5">
         <v-img
           :lazy-src="lazyImage"
           :src="coverImage"
@@ -70,13 +70,13 @@
 
       <v-col class="mt-10 mt-md-0 pa-0" cols="12" md="7">
         <h2
-          class="font-weight-thin mb-2 text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
+          class="font-italic font-weight-thin mb-2 text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
         >
           {{ t('general.presentation.name') }}
         </h2>
         
         <h2
-          class="mb-10 text-center text-h4 text-md-h2 text-md-start text-secondary"
+          class="font-italic mb-6 mb-md-10 text-center text-h4 text-md-h2 text-md-start text-secondary"
         >
           <strong class="font-weight-bold text-capitalize">{{ t('general.headline.frontendDeveloper') }}</strong>
         </h2>
@@ -92,7 +92,7 @@
 
     <v-row class="ma-0 pt-10 pt-md-16">
       <v-col class="pa-0 mb-6 mb-md-12" cols="12">
-        <p class="text-center text-h6 text-md-h3 text-secondary">{{ t('general.someProjectsWorked') }}:</p>
+        <p class="font-italic text-center text-h6 text-md-h3 text-secondary">{{ t('general.someProjectsWorked') }}:</p>
       </v-col>
       <v-col
         v-for="(project, index) in projectList"

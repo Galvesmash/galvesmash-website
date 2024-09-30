@@ -82,9 +82,9 @@
           cols="12"
           md="3"
         >
-          <h3 class="font-weight-bold text-h6 text-secondary">{{ experience.role }}</h3>
-          <h4 class="font-weight-bold text-secondary">{{ experience.company }}</h4>
-          <p class="text-caption text-secondary">{{ moment(experience.start).format('MMM YYYY') }} - {{ experience.end ? moment(experience.end).format('MMM YYYY') : 'Present' }}</p>
+          <h3 class="font-italic font-weight-bold text-h6 text-secondary">{{ experience.role }}</h3>
+          <h4 class="font-italic font-weight-bold text-secondary">{{ experience.company }}</h4>
+          <p class="font-italic text-caption text-secondary">{{ moment(experience.start).format('MMM YYYY') }} - {{ experience.end ? moment(experience.end).format('MMM YYYY') : 'Present' }}</p>
         </v-col>
 
         <v-col

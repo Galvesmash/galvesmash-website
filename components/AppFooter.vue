@@ -18,7 +18,7 @@
       <v-container class="pa-0" max-width="500">
         <social-media-buttons class="mb-5"/>
 
-        <p class="text-center text-headline-footer text-secondary">
+        <p class="font-italic text-center text-headline-footer text-secondary">
           {{ t('general.footer.copyright') }}.
           <br />
           {{ t('general.footer.madeBy') }}.

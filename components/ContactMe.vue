@@ -6,13 +6,13 @@
   <section class="w-100">
     <v-row class="ma-0">
       <v-col
-        class="mb-6 mb-md-0 pa-0 pr-md-4 text-md-center"
+        class="pa-0 pr-md-4 text-md-center"
         color="secondary"
         cols="12"
         lg="4"
         md="5"
       >
-        <h3 class="mb-6 text-h4 text-primary">{{ "Contact Me".toUpperCase() }}</h3>
+        <h3 class="mb-6 font-italic font-weight-bold text-h4 text-primary">{{ "Contact Me".toUpperCase() }}</h3>
 
         <p class="font-italic text-headline-general text-secondary">
           Interested in working with me, hiring<br />my services, or simply connecting?
@@ -22,7 +22,7 @@
           Feel free to send me a message,<br />I’d love to hear from you!
         </p>
 
-        <p class="font-italic mt-6 mt-md-10 text-headline-general text-secondary">
+        <p class="font-italic mt-8 mt-md-12 text-headline-general text-secondary">
           galvesmash.dev@gmail.com<br />
         </p>
 
@@ -34,8 +34,8 @@
           Sao Paulo, Brazil
         </p>
 
-        <v-container class="pa-0 px-md-16">
-          <v-btn class="font-italic mt-6 w-100" color="primary" variant="outlined" max-width="360px">
+        <v-container class="mt-6 mt-md-9 pa-0 px-md-16">
+          <v-btn class="font-italic w-100" color="primary" variant="outlined" max-width="360px">
             Check my CV
           </v-btn>
         </v-container>
