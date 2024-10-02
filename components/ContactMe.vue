@@ -1,5 +1,15 @@
 
 <script setup lang="ts">
+const email = ref('')
+const message = ref('')
+const name = ref('')
+
+const emailRule = computed(() => (value: string) => {
+  const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return pattern.test(value) || 'Invalid e-mail.'
+})
+const requiredRule = computed(() => (value: string) => !!value || 'Required.')
+
 </script>
 
 <template>
@@ -22,7 +32,7 @@
           Feel free to send me a message,<br />I’d love to hear from you!
         </p>
 
-        <p class="font-italic mt-8 mt-md-12 text-headline-general text-secondary">
+        <p class="font-italic mt-6 mt-md-14 text-headline-general text-secondary">
           galvesmash.dev@gmail.com<br />
         </p>
 
@@ -34,7 +44,7 @@
           Sao Paulo, Brazil
         </p>
 
-        <v-container class="mt-6 mt-md-9 pa-0 px-md-16">
+        <v-container class="mt-6 mt-md-10 pa-0 px-md-16">
           <v-btn class="font-italic w-100" color="primary" variant="outlined" max-width="360px">
             Check my CV
           </v-btn>
@@ -42,16 +52,17 @@
       </v-col>
 
       <v-col
-        class="mt-6 mt-md-0 pa-0 pl-md-0 pl-lg-6 text-center"
+        class="mt-7 mt-md-0 pa-0 pl-md-0 pl-lg-6 text-center"
         color="secondary"
         cols="12"
         lg="8"
         md="7"
       >
-        <v-form fast-fail @submit.prevent>
+        <v-form @submit.prevent>
           <v-text-field
             v-model="name"
-            :rules="nameRules"
+            :rules="[requiredRule]"
+            class="mb-1"
             color="primary"
             density="compact"
             height="40px"
@@ -60,18 +71,20 @@
           />
 
           <v-text-field
-            v-model="mail"
-            :rules="mailRules"
+            v-model="email"
+            :rules="[emailRule, requiredRule]"
+            class="mb-1"
             color="primary"
             density="compact"
             height="40px"
-            label="mail"
+            label="email"
             variant="outlined"
           />
 
           <v-textarea
             v-model="message"
-            :rules="messageRules"
+            :rules="[requiredRule]"
+            class="mb-1"
             color="primary"
             density="compact"
             label="Message"

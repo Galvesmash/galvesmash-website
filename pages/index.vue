@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
-  import { useProjectStore } from '~/store'
-  import { useThemeStore } from '~/store'
+  import { useProjectStore, useThemeStore } from '~/store'
 
   definePageMeta({
     layout: 'default'

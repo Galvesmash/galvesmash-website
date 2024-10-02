@@ -112,6 +112,12 @@
     }
   }
 
+  .v-input__details {
+    padding-bottom: 4px !important;
+    padding-top: 2px !important;
+    text-align: left;
+  }
+
   .v-navigation-drawer__scrim {
     position: fixed;
   }
