@@ -1,6 +1,20 @@
 
 <script setup lang="ts">
+import emailjs from 'emailjs-com'
+
+// interface EmailjsFormElements extends HTMLFormElement {
+//   email: string
+//   message: string
+//   name: string
+// }
+interface EventResults {
+  valid: boolean
+}
+
+const config = useRuntimeConfig()
+
 const email = ref('')
+const loading = ref(false)
 const message = ref('')
 const name = ref('')
 
@@ -9,7 +23,33 @@ const emailRule = computed(() => (value: string) => {
   return pattern.test(value) || 'Invalid e-mail.'
 })
 const requiredRule = computed(() => (value: string) => !!value || 'Required.')
+const maxCharactersRule = computed(() => (value: string) => value.length <= 3200 || 'Max 3200 characters')
 
+const sendEmail = async (e: SubmitEvent) => {
+  loading.value = true
+
+  const eventResults: any = await e
+
+  if (!eventResults.valid) return loading.value = false
+
+  const formPayload = e.target as HTMLFormElement
+
+  try {
+    emailjs.sendForm(
+      config.public.emailjs.serviceKey,
+      config.public.emailjs.templateKey,
+      formPayload
+    )
+  } catch(error) {
+    console.error({error})
+  }
+
+  loading.value = false
+}
+
+onMounted(() => {
+  emailjs.init(config.public.emailjs.publicKey)
+})
 </script>
 
 <template>
@@ -58,7 +98,7 @@ const requiredRule = computed(() => (value: string) => !!value || 'Required.')
         lg="8"
         md="7"
       >
-        <v-form @submit.prevent>
+        <v-form @submit.prevent="sendEmail">
           <v-text-field
             v-model="name"
             :rules="[requiredRule]"
@@ -67,6 +107,7 @@ const requiredRule = computed(() => (value: string) => !!value || 'Required.')
             density="compact"
             height="40px"
             label="name"
+            name="name"
             variant="outlined"
           />
 
@@ -78,20 +119,28 @@ const requiredRule = computed(() => (value: string) => !!value || 'Required.')
             density="compact"
             height="40px"
             label="email"
+            name="email"
             variant="outlined"
           />
 
           <v-textarea
             v-model="message"
-            :rules="[requiredRule]"
+            :rules="[maxCharactersRule, requiredRule]"
             class="mb-1"
             color="primary"
             density="compact"
-            label="Message"
+            label="message"
+            name="message"
             variant="outlined"
           />
 
-          <v-btn class="font-italic" color="primary" type="submit" variant="outlined">
+          <v-btn
+            :loading="loading"
+            class="font-italic"
+            color="primary"
+            type="submit"
+            variant="outlined"
+          >
             Send
           </v-btn>
         </v-form>
