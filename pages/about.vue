@@ -38,19 +38,19 @@
         <about-me />
       </v-col>
 
-      <v-col class="mt-12 mt-md-16 pa-0" cols="12">
+      <v-col class="mt-10 mt-md-16 pa-0" cols="12">
         <h3 class="mb-6 font-italic font-weight-bold text-md-center text-h4 text-primary">{{ "Skills".toUpperCase() }}</h3>
 
         <skill-list />
       </v-col>
 
-      <v-col class="mb-2 mb-md-6 mt-12 mt-md-16 pa-0" cols="12">
+      <v-col class="mb-2 mb-md-6 mt-10 mt-md-16 pa-0" cols="12">
         <h3 class="mb-6 font-italic font-weight-bold text-md-center text-h4 text-primary">{{ "Experience".toUpperCase() }}</h3>
 
         <experience-list />
       </v-col>
 
-      <v-col class="mt-12 mt-md-16 pa-0" cols="12">
+      <v-col class="mt-10 mt-md-16 pa-0" cols="12">
         <contact-me />
       </v-col>
     </v-row>

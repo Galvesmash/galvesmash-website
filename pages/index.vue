@@ -109,5 +109,11 @@
         />
       </v-col>
     </v-row>
+
+    <v-row class="ma-0 pt-10 pt-md-16">
+      <v-col class="pa-0" cols="12">
+        <contact-me />
+      </v-col>
+    </v-row>
   </section>
 </template>
