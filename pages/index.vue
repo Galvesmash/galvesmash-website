@@ -22,9 +22,9 @@
   const lazyImage = computed(() => '_nuxt/assets/images/lazy-me-small.png')
   const smCols = computed(() => projectList.value.length >=2 ? '6' : '12')
   const mdCols = computed(() => {
-    if (projectList.value.length >=3) return '4'
+    if (projectList.value.length >= 3) return '4'
 
-    return projectList.value.length >=2 ? '6' : '12'
+    return projectList.value.length >= 2 ? '6' : '12'
   })
 
   onMounted(() => {
@@ -53,10 +53,10 @@
     <v-row class="ma-0">
       <v-col class="d-flex justify-md-end pa-0 pr-md-16" cols="12" md="5">
         <v-img
+          :alt="t('general.imageAlt')"
           :lazy-src="lazyImage"
           :src="coverImage"
           :style="{ filter: 'contrast(0.8)' }"
-          alt="Foto de Gabriel Galves Taliatti"
           aspect-ratio="1"
           class="mx-auto mx-md-0"
           height="100%"

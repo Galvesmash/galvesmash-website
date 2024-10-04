@@ -1,7 +1,9 @@
 
 <script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
   import { useGeneralStore, useSkillStore } from '~/store'
 
+  const { t } = useI18n()
   const generalStore = useGeneralStore()
   const skillStore = useSkillStore()
   const { isMobileView } = storeToRefs(generalStore)
@@ -9,78 +11,24 @@
 
   onMounted(() => {
     skillStore.setSkillList([
-      {
-        icon: 'mdi:mdi-language-html5',
-        title: 'HTML5'
-      },
-      {
-        icon: 'mdi:mdi-language-javascript',
-        title: 'JavaScript'
-      },
-      {
-        icon: 'mdi:mdi-language-typescript',
-        title: 'TypeScript'
-      },
-      {
-        icon: 'mdi:mdi-vuejs',
-        title: 'Vue.js'
-      },
-      {
-        icon: 'mdi:mdi-react',
-        title: 'React'
-      },
-      {
-        icon: 'mdi:mdi-nuxt',
-        title: 'Nuxt'
-      },
-      {
-        icon: 'mdi:mdi-language-css3',
-        title: 'CSS3'
-      },
-      {
-        icon: 'mdi:mdi-sass',
-        title: 'Sass'
-      },
-      {
-        icon: 'fa:fa-brands fa-less',
-        title: 'Less'
-      },
-      {
-        icon: 'mdi:mdi-vuetify',
-        title: 'Vuetify'
-      },
-      {
-        icon: 'mdi:mdi-tailwind',
-        title: 'Tailwind CSS'
-      },
-      {
-        icon: 'mdi:mdi-responsive',
-        title: 'Responsive Design'
-      },
-      {
-        icon: 'fa:fa-brands fa-searchengin',
-        title: 'SEO'
-      },
-      {
-        icon: 'mdi:mdi-git',
-        title: 'Git'
-      },
-      {
-        icon: 'mdi:mdi-github',
-        title: 'Github'
-      },
-      {
-        icon: 'mdi:mdi-jira',
-        title: 'Jira'
-      },
-      {
-        icon: 'mdi:mdi-unity',
-        title: 'Unity'
-      },
-      {
-        icon: 'mdi:mdi-blender-software',
-        title: 'Blender'
-      }
+      { icon: 'mdi:mdi-language-html5', translation: 'html' },
+      { icon: 'mdi:mdi-language-javascript', translation: 'javascript' },
+      { icon: 'mdi:mdi-language-typescript', translation: 'typescript' },
+      { icon: 'mdi:mdi-vuejs', translation: 'vue' },
+      { icon: 'mdi:mdi-react', translation: 'react' },
+      { icon: 'mdi:mdi-nuxt', translation: 'nuxt' },
+      { icon: 'mdi:mdi-language-css3', translation: 'css' },
+      { icon: 'mdi:mdi-sass', translation: 'sass' },
+      { icon: 'fa:fa-brands fa-less', translation: 'less' },
+      { icon: 'mdi:mdi-vuetify', translation: 'vuetify' },
+      { icon: 'mdi:mdi-tailwind', translation: 'tailwind' },
+      { icon: 'mdi:mdi-responsive', translation: 'responsive' },
+      { icon: 'fa:fa-brands fa-searchengin', translation: 'seo' },
+      { icon: 'mdi:mdi-git', translation: 'git' },
+      { icon: 'mdi:mdi-github', translation: 'github' },
+      { icon: 'mdi:mdi-jira', translation: 'jira' },
+      { icon: 'mdi:mdi-unity', translation: 'unity' },
+      { icon: 'mdi:mdi-blender-software', translation: 'blender' }
     ])
   })
 </script>
@@ -97,7 +45,7 @@
       >
         <v-icon color="secondary" :icon="skill.icon" :size="isMobileView ? 32 : 80" />
 
-        <h4 class="font-italic text-caption text-md-h6 text-secondary">{{ skill.title }}</h4>
+        <h4 class="font-italic text-caption text-md-h6 text-secondary">{{ t(`about.skills.list.${skill.translation}`) }}</h4>
       </v-col>
     </v-row>
   </section>

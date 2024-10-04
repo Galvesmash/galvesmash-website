@@ -35,7 +35,7 @@ export interface ProjectStore {
 
 export interface SkillObject {
   icon: string
-  title: string
+  translation: string
 }
 
 export interface SkillStore {
