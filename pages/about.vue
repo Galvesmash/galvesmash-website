@@ -47,7 +47,7 @@
       </v-col>
 
       <v-col class="mb-2 mb-md-6 mt-10 mt-md-16 pa-0" cols="12">
-        <h3 class="mb-6 font-italic font-weight-bold text-md-center text-h4 text-primary text-uppercase">{{ "Experience" }}</h3>
+        <h3 class="mb-6 font-italic font-weight-bold text-md-center text-h4 text-primary text-uppercase">{{ t('about.experience.title') }}</h3>
 
         <experience-list />
       </v-col>

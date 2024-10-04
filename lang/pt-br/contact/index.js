@@ -1,6 +1,5 @@
 export const contact = {
   checkMyCv: 'Confira meu CV', 
-  email: 'galvesmash.dev@gmail.com',
   form: {
     email: 'Email',
     message: 'Mensagem',
@@ -14,6 +13,6 @@ export const contact = {
   },
   location: 'São Paulo, Brasil',
   phone: '11 96639-9361',
-  text: 'Interessado em trabalhar comigo, contratar\nmeus serviços ou simplesmente se conectar?\n\nSinta-se livre para me enviar uma mensagem,\nEu adoraria ouvir de você!',
-  title: 'Contacte-me',
+  text: 'Interessado em trabalhar comigo\nou simplesmente se conectar?\n\nMe mande uma mensagem,\nEu adoraria ouvir você!',
+  title: 'Contato',
 }

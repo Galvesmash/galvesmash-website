@@ -54,14 +54,14 @@
         cols="12"
         md="5"
       >
-        <h3 class="mb-6 font-italic font-weight-bold text-h4 text-primary">{{ "Contact Me".toUpperCase() }}</h3>
+        <h3 class="mb-6 font-italic font-weight-bold text-h4 text-primary text-uppercase">{{ t('contact.title') }}</h3>
 
         <p class="font-italic text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
           {{ t('contact.text') }}
         </p>
 
         <p class="font-italic mt-6 mt-md-14 text-headline-general text-secondary">
-          {{ t('contact.email') }}
+          galvesmash.dev@gmail.com
         </p>
 
         <p class="font-italic mt-1 text-headline-general text-secondary">

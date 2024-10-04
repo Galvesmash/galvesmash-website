@@ -1,6 +1,5 @@
 export const contact = {
   checkMyCv: 'Check my CV', 
-  email: 'galvesmash.dev@gmail.com',
   form: {
     email: 'Email',
     message: 'Message',
