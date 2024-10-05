@@ -16,6 +16,7 @@
 <template>
   <v-navigation-drawer
     v-model="drawerMenu"
+    class="bg-background"
     temporary
     width="300"
   >

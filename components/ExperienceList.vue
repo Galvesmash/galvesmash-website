@@ -9,7 +9,7 @@
 
 <template>
   <section class="w-100">
-    <v-container class="pa-0 px-md-10" max-width="1008">
+    <v-container class="pa-0 px-md-10" max-width="1280">
       <v-row
         v-for="index in listLength"
         :key="index"
@@ -38,7 +38,7 @@
           cols="12"
           md="9"
         >
-          <p class="font-italic mt-0 mt-md-2 text-headline-general text-secondary">{{ t(`about.experience.list[${index-1}].text`) }}</p>
+          <p class="font-italic mt-0 mt-md-2 text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">{{ t(`about.experience.list[${index-1}].text`) }}</p>
         </v-col>
 
         <v-divider v-if="index < listLength" class="my-4 my-md-6" />

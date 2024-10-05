@@ -1,13 +1,11 @@
 <script setup lang="ts">
   import { useTheme } from 'vuetify'
-  import { useI18n } from 'vue-i18n'
   import { useGeneralStore, useThemeStore } from '~/store'
   import { storeToRefs } from 'pinia'
 
   const theme = useTheme()
   const generalStore = useGeneralStore()
   const themeStore = useThemeStore()
-  const { t } = useI18n()
   const { isMobileView } = storeToRefs(generalStore)
   const { currentLayout, currentTheme } = storeToRefs(themeStore)
 
@@ -38,7 +36,7 @@
     :name="currentLayout"
   >
     <v-app
-      :class="`v-layout--${currentLayout}`"
+      :class="`pt-15 pt-md-0 v-layout--${currentLayout}`"
       :theme="currentTheme"
     >
       <side-menu />
@@ -91,6 +89,10 @@
       letter-spacing: 9px !important;
       line-height: 28px !important;
     }
+  }
+
+  .no-letter-spacing {
+    letter-spacing: normal !important;
   }
 
   .filter-blur {

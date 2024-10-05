@@ -22,16 +22,18 @@
 </script>
 
 <template>
-  <v-hover v-slot="{ isHovering, props }">
-    <v-btn
-      v-bind="props"
-      :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
-      :icon="`fa-solid fa-${currentTheme === availableThemes[0] ? 'moon' : 'sun'}`"
-      :style="{ transition: 'all .3s' }"
-      class="opacity-100"
-      density="compact"
-      variant="plain"
-      @click="toggleTheme()"
-    />
-  </v-hover>
+  <section>
+    <v-hover v-slot="{ isHovering, props }">
+      <v-btn
+        v-bind="props"
+        :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
+        :icon="`fa-solid fa-${currentTheme === availableThemes[0] ? 'moon' : 'sun'}`"
+        :style="{ transition: 'all .3s' }"
+        class="opacity-100"
+        density="compact"
+        variant="plain"
+        @click="toggleTheme()"
+      />
+    </v-hover>
+  </section>
 </template>

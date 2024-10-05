@@ -13,6 +13,10 @@ export const general = {
     tarmann: 'Studiotarmann'
   },
   imageAlt: 'Foto de Gabriel Galves Taliatti',
+  language: {
+    en: 'English',
+    'pt-br': 'Português',
+  },
   menu: {
     about: 'Sobre',
     contact: 'Contato'

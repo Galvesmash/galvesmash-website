@@ -17,7 +17,9 @@
 
 <template>
   <v-toolbar
+    :class="{ 'position-fixed': isMobileView }"
     :height="isMobileView ? 60 : 203"
+    :style="{ zIndex: '10' }"
     color="background"
     dark
     flat
@@ -51,8 +53,10 @@
             <responsive-logo @handle-interaction="changeRoute">
               <template v-slot:before>
                 <div v-if="!isMobileView" class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0">
-                  <h6 class="font-italic text-headline text-no-wrap text-secondary text-uppercase w-100">
-                    {{ t('general.headline.gameDeveloper') }}
+                  <h6 class="d-flex font-italic justify-space-between no-letter-spacing text-headline text-no-wrap text-secondary text-uppercase w-100">
+                    <span v-for="(letter, index) in t('general.headline.frontendDeveloper')" :key="index">
+                      {{ letter }}
+                    </span>
                   </h6>
                 </div>
               </template>
@@ -74,6 +78,8 @@
         </div>
 
         <div class="align-center d-flex justify-end ml-6 ml-md-0 my-0 my-md-3">
+          <lang-selector-button class="mr-5"/>
+
           <toggle-theme-button />
         </div>
       </div>
