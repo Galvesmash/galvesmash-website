@@ -4,6 +4,7 @@
   import { storeToRefs } from 'pinia'
 
   const { t } = useI18n()
+  const config = useRuntimeConfig()
   const router = useRouter()
   const generalStore = useGeneralStore()
   const { drawerMenu } = storeToRefs(generalStore)
@@ -37,21 +38,23 @@
     temporary
     width="300"
   >
-    <div class="mb-6 mt-2 pl-5 pr-2">
+    <div class="mb-5 mt-2 pl-5 pr-2">
       <galvesmash-logo
         color="secondary"
         height="52"
         width="140"
       />
 
-      <h2 class="font-italic text-headline text-secondary text-uppercase w-100">
-        {{ t('general.headline.gameDeveloper') }}
+      <h2 class="d-flex font-italic justify-space-between no-letter-spacing text-headline text-secondary text-uppercase w-100">
+        <span v-for="(letter, index) in t('general.headline.frontendDeveloper')" :key="index">
+          {{ letter }}
+        </span>
       </h2>
     </div>
 
     <v-divider />
 
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column mt-2">
       <v-btn
         color="secondary"
         class="font-italic justify-start text-headline-subtitle"
@@ -70,5 +73,11 @@
         {{ t('general.menu.contact') }}
       </v-btn>
     </div>
+
+    <template v-slot:append>
+      <v-divider />
+
+      <p class="font-italic py-3 px-4 text-caption text-secondary">v{{ config.public.version }}</p>
+    </template>
   </v-navigation-drawer>
 </template>

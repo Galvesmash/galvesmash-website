@@ -1,4 +1,5 @@
 export const general = {
+  copyrightText: 'Copyright © 2024 - Galvesmash - All right reserved\nMade by Gabriel Galves Taliatti\nDesigned by Studiotarmann',
   headline: {
     frontendDeveloper: "Frontend developer",
     gameDeveloper: "Game developer",
@@ -8,8 +9,7 @@ export const general = {
   },
   footer: {
     copyright: 'Copyright © 2024 - Galvesmash - All right reserved',
-    madeBy: 'Made by Gabriel Galves Taliatti',
-    designedBy: 'Designed by',
+    madeBy: 'Made by Gabriel Galves Taliatti\nDesigned by',
     tarmann: 'Studiotarmann'
   },
   imageAlt: 'Gabriel Galves Taliatti’s picture',

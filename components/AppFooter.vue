@@ -4,6 +4,7 @@
   import { storeToRefs } from 'pinia'
 
   const { t } = useI18n()
+  const config = useRuntimeConfig()
   const generalStore = useGeneralStore()
   const { isMobileView } = storeToRefs(generalStore)
 </script>
@@ -18,12 +19,11 @@
       <v-container class="pa-0" max-width="500">
         <social-media-buttons class="mb-5"/>
 
-        <p class="font-italic text-center text-headline-footer text-secondary">
-          {{ t('general.footer.copyright') }}.
-          <br />
-          {{ t('general.footer.madeBy') }}.
-          <br />
-          {{ t('general.footer.designedBy') }}
+        <p class="font-italic text-center text-headline-footer text-secondary" :style="{ whiteSpace: 'break-spaces' }">
+          {{ t('general.footer.copyright') }}<br />
+
+          {{ t('general.footer.madeBy') }}
+
           <v-hover v-slot="{ isHovering, props }">
             <v-btn
               v-bind="props"
@@ -39,8 +39,10 @@
             >
               {{ t('general.footer.tarmann') }}
             </v-btn>
-          </v-hover>.
+          </v-hover>
         </p>
+
+        <p class="font-italic mt-1 text-center text-headline-footer text-secondary">v{{ config.public.version }}</p>
       </v-container>
     </v-container>
   </v-footer>

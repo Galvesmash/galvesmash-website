@@ -36,7 +36,8 @@ export default defineNuxtConfig({
         publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
         serviceKey: process.env.VUE_APP_EMAILJS_SERVICE,
         templateKey: process.env.VUE_APP_EMAILJS_TEMPLATE
-      }
+      },
+      version: process.env.VUE_APP_VERSION,
     }
   },
 

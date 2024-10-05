@@ -8,8 +8,7 @@ export const general = {
   },
   footer: {
     copyright: 'Copyright © 2024 - Galvesmash - Todos os direitos reservados',
-    madeBy: 'Feito por Gabriel Galves Taliatti',
-    designedBy: 'Desenhado por',
+    madeBy: 'Feito por Gabriel Galves Taliatti\nDesenhado por',
     tarmann: 'Studiotarmann'
   },
   imageAlt: 'Foto de Gabriel Galves Taliatti',
