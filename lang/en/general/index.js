@@ -23,6 +23,7 @@ export const general = {
   },
   present: 'Present',
   presentation: {
+    button: 'Check more about me',
     name: 'Gabriel Galves Taliatti',
     title: 'Over 8 years developing experiences\nfor web apps and sites.'
   },

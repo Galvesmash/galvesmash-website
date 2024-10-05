@@ -73,8 +73,17 @@
         </p>
 
         <v-container class="mt-6 mt-md-10 pa-0 px-md-16">
-          <v-btn class="font-italic font-weight-bold w-100" color="primary" variant="outlined" max-width="360px">
+          <v-btn
+            :href="config.public.cvLink"
+            class="font-italic font-weight-bold w-100"
+            color="primary"
+            max-width="360px"
+            target="_blank"
+            variant="outlined"
+          >
             {{ t('contact.checkMyCv') }}
+
+            <v-icon class="ml-2" color="primary" icon="fa-solid fa-up-right-from-square" size="11" />
           </v-btn>
         </v-container>
       </v-col>

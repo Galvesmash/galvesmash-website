@@ -41,7 +41,7 @@ export const about = {
         end: '11-01-2023',
         role: 'Desenvolvedor Frontend',
         start: '10-01-2020',
-        text: 'Trabalhei como desenvolvedor de frontend com Javascript, Vue.js, Vuetify.js, Jest, Vue-Test-Utils e Cypress.\nTambém ajudei a equipe de backend com PHP e Laravel.\nFui responsável pelo desenvolvimento e criação de novas funcionalidades para o site da Teladoc Health em Vue.js, Vuetify.js, SASS, Responsive Design e testes. Também fui responsável pelo desenvolvimento e manutenção de uma Rest API com Microsserviçosem Laravel.'
+        text: 'Trabalhei como desenvolvedor de frontend com Javascript, Vue.js, Vuetify.js, Jest, Vue-Test-Utils e Cypress.\nTambém ajudei a equipe de backend com PHP e Laravel.\nFui responsável pelo desenvolvimento e criação de novas funcionalidades para o site da Teladoc Health em Vue.js, Vuetify.js, SASS, Responsive Design e testes. Também fui responsável pelo desenvolvimento e manutenção de uma Rest API com Microsserviços em Laravel.'
       },
       2: {
         company: 'Tem Saúde',
@@ -62,14 +62,14 @@ export const about = {
         end: '07-01-2019',
         role: 'Desenvolvedor Full Stack',
         start: '12-01-2018',
-        text: 'Desenvolvedor Full Stack para o produto 2Toring da 2Mundos. Como Frontend trabalhei com JavaScript, Vue.js, Vuetify.js, SASS e Design Responsivo. Como um backend, eu estava aprendendo PHP, Laravel e Microsserviços.\nResponsável por guiar uma equipe, criação e integração da API Rest, implementando recursos e integrando todas as novas ideias para a plataforma de aprendizagem 2BeLive. Participação em implementações usando Pusher e Opentok para a Live Session do 2Toring.'
+        text: 'Desenvolvedor Full Stack para o produto 2Toring da 2Mundos. Como Frontend trabalhei com JavaScript, Vue.js, Vuetify.js, SASS e Design Responsivo. Como um backend, eu estava aprendendo PHP, Laravel e Microsserviços.\nResponsável por guiar uma equipe, criação e integração da API Rest, implementando recursos e integrando todas as novas ideias para a plataforma de aprendizagem 2BeLive.\nParticipação em implementações usando Pusher e Opentok para a Live Session do 2Toring.'
       },
       5: {
         company: '2Mundos',
         end: '12-01-2018',
         role: 'Desenvolvedor Frontend',
         start: '10-01-2016',
-        text: 'Desenvolvedor de frontend para o produto TutorIQ (propriedade da Age of Learning) com viagens de trabalho para L.A. para assistência do TutorIQ na sede da Age of Learning. Trabalhei com Angular.js 1.6, SASS, Design Responsivo e metodologia BEM. Também trabalhei em tarefas e recursos envolvendo Cordova, Ionic, Surfly e Opentok para a sessão ao vivo do TutorIQ.'
+        text: 'Desenvolvedor de frontend para o produto TutorIQ (propriedade da Age of Learning) com viagens de trabalho para L.A. para assistência do TutorIQ na sede da Age of Learning. Trabalhei com Angular.js 1.6, SASS, Design Responsivo e metodologia BEM. Também trabalhei em tarefas e funcionalidades envolvendo Cordova, Ionic, Surfly e Opentok para a sessão ao vivo do TutorIQ.'
       },
       6: {
         company: '2Mundos',

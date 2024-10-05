@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
-  import { useProjectStore, useThemeStore } from '~/store'
+  import { useGeneralStore, useProjectStore, useThemeStore } from '~/store'
 
   definePageMeta({
     layout: 'default'
@@ -8,13 +8,15 @@
 
   const { t } = useI18n()
   const router = useRouter()
+  const generalStore = useGeneralStore()
   const projectStore = useProjectStore()
   const themeStore = useThemeStore()
+  const { isMobileView } = storeToRefs(generalStore)
   const { projectList } = storeToRefs(projectStore)
 
   themeStore.setCurrentLayout('default')
 
-  function redirectToRoute(route: string = 'project') {
+  function changeRoute(route: string = 'project') {
     router.push({ path: `/${route}` })
   }
 
@@ -86,6 +88,27 @@
         >
           {{ t('general.presentation.title') }}
         </h1>
+
+        <v-hover v-slot="{ isHovering, props }">
+          <v-btn
+            v-bind="props"
+            :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
+            :style="{ transition: 'all .3s' }"
+            class="d-flex font-italic mx-auto mt-2 mx-md-0 opacity-100 pa-0 text-decoration-underline text-none"
+            variant="plain"
+            @click="changeRoute('about')"
+          >
+            {{ t('general.presentation.button') }}
+
+            <v-icon
+              :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
+              :style="{ transition: 'all .3s' }"
+              class="ml-2"
+              icon="fa-solid fa-arrow-right-long"
+              size="11"
+            />
+          </v-btn>
+        </v-hover>
       </v-col>
     </v-row>
 
@@ -105,7 +128,7 @@
           :cover="project.cover"
           :subtitle="project.subtitle"
           :title="project.title"
-          @handle-interaction="redirectToRoute()"
+          @handle-interaction="changeRoute()"
         />
       </v-col>
     </v-row>

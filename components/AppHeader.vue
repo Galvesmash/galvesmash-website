@@ -10,8 +10,21 @@
 
   const setDrawerMenu = generalStore.setDrawerMenu
 
+  const bottomThreshold = 900
+
   const changeRoute = (page = '') => {
     router.push(`/${page}`)
+  }
+
+  const scrollToBottom = () => {
+    const body = document.body
+    const html = document.documentElement
+
+    var documentHeight = Math.max(
+      body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight
+    )
+
+    window.scrollTo({ top: documentHeight - bottomThreshold, behavior: "smooth" })
   }
 </script>
 
@@ -69,7 +82,7 @@
                 :style="{ transition: 'all .3s' }"
                 class="d-none d-md-block font-italic mb-2 ml-md-12 opacity-100 pl-3 pr-1 text-headline"
                 variant="plain"
-                @click="changeRoute('contact')"
+                @click="scrollToBottom"
               >
                 {{ t('general.menu.contact') }}
               </v-btn>

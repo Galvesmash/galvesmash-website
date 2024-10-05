@@ -31,6 +31,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
+      cvLink: process.env.VUE_APP_CV_LINK,
       emailjs: {
         publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
         serviceKey: process.env.VUE_APP_EMAILJS_SERVICE,

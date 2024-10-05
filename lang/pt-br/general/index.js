@@ -23,6 +23,7 @@ export const general = {
   },
   present: 'Presente',
   presentation: {
+    button: 'Confira mais sobre mim',
     name: 'Gabriel Galves Taliatti',
     title: 'Mais de 8 anos desenvolvendo\nexperiências para web apps e sites.'
   },
