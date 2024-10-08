@@ -1,9 +1,15 @@
 <script setup lang="ts">
-  import { useGeneralStore } from '~/store'
+  interface Props {
+    height?: string
+    width?: string
+  }
   
   const emit = defineEmits(['handle-interaction'])
-  const generalStore = useGeneralStore()
-  const { isMobileView } = storeToRefs(generalStore)
+
+  const props = withDefaults(defineProps<Props>(), {
+    height: '52',
+    width: '140'
+  })
 
   function handleInteraction() {
     emit('handle-interaction')
@@ -16,8 +22,9 @@
 
     <galvesmash-logo
       color="secondary"
-      :height="isMobileView ? '52' : '101'"
-      :width="isMobileView ? '140' : '368'"
+      :height="props.height"
+      :style="{ transition: 'all .3s' }"
+      :width="props.width"
       @click="handleInteraction"
     />
 

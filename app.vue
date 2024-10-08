@@ -36,7 +36,7 @@
     :name="currentLayout"
   >
     <v-app
-      :class="`pt-15 pt-md-0 v-layout--${currentLayout}`"
+      :class="[ { 'pt-md-app': !isMobileView }, `pt-16 v-layout--${currentLayout}`]"
       :theme="currentTheme"
     >
       <side-menu />
@@ -49,6 +49,13 @@
 </template>
 
 <style lang="scss">
+  .filter-blur {
+    &-1 {  filter: blur(1px); }
+    &-2 {  filter: blur(2px); }
+    &-5 {  filter: blur(5px); }
+    &-10 {  filter: blur(10px); }
+  }
+
   .text-headline {
     font-size: 12px !important;
     font-weight: 100 !important;
@@ -95,11 +102,8 @@
     letter-spacing: normal !important;
   }
 
-  .filter-blur {
-    &-1 {  filter: blur(1px); }
-    &-2 {  filter: blur(2px); }
-    &-5 {  filter: blur(5px); }
-    &-10 {  filter: blur(10px); }
+  .pt-md-app {
+    padding-top: 203px !important;
   }
 
   .v-field-label {

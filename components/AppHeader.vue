@@ -10,7 +10,18 @@
 
   const setDrawerMenu = generalStore.setDrawerMenu
 
-  const bottomThreshold = 900
+  const BOTTOM_THRESHOLD = 900
+  const DESKTOP_HEADER_HEIGHT = 203
+  const DESKTOP_LOGO_HEIGHT = '101'
+  const DESKTOP_LOGO_WIDTH = '368'
+  const MOBILE_HEADER_HEIGHT = 60
+  const MOBILE_LOGO_HEIGHT = '52'
+  const MOBILE_LOGO_WIDTH = '140'
+
+  const desktopHeaderHeight = ref(DESKTOP_HEADER_HEIGHT)
+  const desktopLogoHeight = ref(DESKTOP_LOGO_HEIGHT)
+  const desktopLogoWidth = ref(DESKTOP_LOGO_WIDTH)
+  const isUserScrolling = ref(false)
 
   const changeRoute = (page = '') => {
     router.push(`/${page}`)
@@ -24,29 +35,55 @@
       body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight
     )
 
-    window.scrollTo({ top: documentHeight - bottomThreshold, behavior: "smooth" })
+    window.scrollTo({ top: documentHeight - BOTTOM_THRESHOLD, behavior: "smooth" })
   }
+
+  const handleScroll = () => {
+    if (isMobileView.value) return
+
+    isUserScrolling.value = (window.scrollY > 0)
+    desktopHeaderHeight.value = isUserScrolling.value ? MOBILE_HEADER_HEIGHT : DESKTOP_HEADER_HEIGHT
+    desktopLogoHeight.value = isUserScrolling.value ? MOBILE_LOGO_HEIGHT : DESKTOP_LOGO_HEIGHT
+    desktopLogoWidth.value = isUserScrolling.value ? MOBILE_LOGO_WIDTH : DESKTOP_LOGO_WIDTH
+  }
+
+  onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('scroll', handleScroll)
+  })
 </script>
 
 <template>
   <v-toolbar
-    :class="{ 'position-fixed': isMobileView }"
-    :height="isMobileView ? 60 : 203"
-    :style="{ zIndex: '10' }"
+    :height="isMobileView ? MOBILE_HEADER_HEIGHT : desktopHeaderHeight"
+    :style="{ transition: 'all .3s', zIndex: '10' }"
+    class="position-fixed"
     color="background"
     dark
     flat
   >
-    <v-container class="align-self-start px-5 py-0" max-width="1440">
-      <div class="d-flex flex-row flex-md-column-reverse justify-space-between w-100">
-        <div class="d-flex">
-          <div class="align-center d-flex justify-center mx-auto">
+    <v-container class="align-self-start h-100 px-5 py-0" max-width="1440" >
+      <div
+        :class="{ 'flex-md-column': !isUserScrolling }"
+        :style="{ transition: 'all .3s' }"
+        class="d-flex flex-row h-100 justify-space-between position-relative w-100"
+      >
+        <div
+          :class="[ isUserScrolling ? 'pl-md-16 w-100' : 'pt-md-15' ]"
+          :style="{ transition: 'all .3s' }"
+          class="d-flex pt-0"
+        >
+          <div :style="{ transition: 'all .3s' }" class="align-center d-flex justify-center mx-auto">
             <v-hover v-slot="{ isHovering, props }">
               <v-btn
                 v-bind="props"
+                :class="{ 'mb-2': !isUserScrolling }"
                 :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
                 :style="{ transition: 'all .3s' }"
-                class="d-none d-md-block font-italic mb-2 mr-md-12 opacity-100 pl-3 pr-1 text-headline"
+                class="d-none d-md-block font-italic mr-md-12 opacity-100 pl-3 pr-1 text-headline"
                 variant="plain"
                 @click="changeRoute('about')"
               >
@@ -63,9 +100,19 @@
               @click.stop="setDrawerMenu(!drawerMenu)"
             />
 
-            <responsive-logo @handle-interaction="changeRoute">
+            <responsive-logo
+              :height="isMobileView ? MOBILE_LOGO_HEIGHT : desktopLogoHeight"
+              :style="{ transition: 'all .3s' }"
+              :width="isMobileView ? MOBILE_LOGO_WIDTH : desktopLogoWidth"
+              @handle-interaction="changeRoute"
+            >
               <template v-slot:before>
-                <div v-if="!isMobileView" class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0">
+                <div
+                  v-if="!isMobileView"
+                  :class="{ 'opacity-0': isUserScrolling }"
+                  :style="{ transition: 'all .2s' }"
+                  class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0"
+                >
                   <h6 class="d-flex font-italic justify-space-between no-letter-spacing text-headline text-no-wrap text-secondary text-uppercase w-100">
                     <span v-for="(letter, index) in t('general.headline.frontendDeveloper')" :key="index">
                       {{ letter }}
@@ -78,9 +125,10 @@
             <v-hover v-slot="{ isHovering, props }">
               <v-btn
                 v-bind="props"
+                :class="{ 'mb-2': !isUserScrolling }"
                 :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
                 :style="{ transition: 'all .3s' }"
-                class="d-none d-md-block font-italic mb-2 ml-md-12 opacity-100 pl-3 pr-1 text-headline"
+                class="d-none d-md-block font-italic ml-md-12 opacity-100 pl-3 pr-1 text-headline"
                 variant="plain"
                 @click="scrollToBottom"
               >
@@ -90,7 +138,7 @@
           </div>
         </div>
 
-        <div class="align-center d-flex justify-end ml-6 ml-md-0 my-0 my-md-3">
+        <div :class="{ 'position-absolute right-0': !isMobileView }" class="align-center d-flex justify-end ml-6 ml-md-0 my-0 my-md-3">
           <lang-selector-button class="mr-5"/>
 
           <toggle-theme-button />

@@ -8,6 +8,9 @@
 
   const { isMobileView } = storeToRefs(generalStore)
 
+  const logoHeight = ref(isMobileView.value ? '52' : '101')
+  const logoWidth = ref(isMobileView.value ? '140' : '368')
+
   const changeRoute = () => {
     router.push('/')
   }
@@ -15,7 +18,7 @@
 
 <template>
   <section class="d-flex justify-center">
-    <responsive-logo @handle-interaction="changeRoute">
+    <responsive-logo :height="logoHeight" :width="logoWidth" @handle-interaction="changeRoute">
       <template v-slot:before>
         <div v-if="!isMobileView" class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0">
           <h6 class="font-italic text-headline text-no-wrap text-secondary text-uppercase w-100">
