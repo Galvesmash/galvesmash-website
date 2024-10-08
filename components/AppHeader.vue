@@ -11,6 +11,7 @@
   const setDrawerMenu = generalStore.setDrawerMenu
 
   const BOTTOM_THRESHOLD = 900
+  const TOP_THRESHOLD = 32
   const DESKTOP_HEADER_HEIGHT = 203
   const DESKTOP_LOGO_HEIGHT = '101'
   const DESKTOP_LOGO_WIDTH = '368'
@@ -41,7 +42,7 @@
   const handleScroll = () => {
     if (isMobileView.value) return
 
-    isUserScrolling.value = (window.scrollY > 0)
+    isUserScrolling.value = (window.scrollY > TOP_THRESHOLD)
     desktopHeaderHeight.value = isUserScrolling.value ? MOBILE_HEADER_HEIGHT : DESKTOP_HEADER_HEIGHT
     desktopLogoHeight.value = isUserScrolling.value ? MOBILE_LOGO_HEIGHT : DESKTOP_LOGO_HEIGHT
     desktopLogoWidth.value = isUserScrolling.value ? MOBILE_LOGO_WIDTH : DESKTOP_LOGO_WIDTH
