@@ -1,15 +1,30 @@
 <template>
-  <div class="layout-default">
-    <AppHeader />
+  <div>
+    <app-header />
     
     <slot />
+
+    <app-footer />
   </div>
 </template>
 
 <style lang="scss">
-  .layout-default {
-    // 
+  $footerHeightDesktop: 212px;
+  $footerHeightMobile: 140px;
+  $headerHeightDesktop: 203px;
+  $headerHeightMobile: 60px;
+
+  .v-layout {
+    &--default {
+      .v-application {
+        &__wrap {
+          min-height: calc(100dvh - $headerHeightDesktop - $footerHeightDesktop) !important;
+        
+          @media screen and (max-width: 960px) {
+            min-height: calc(100dvh - $headerHeightMobile - $footerHeightMobile) !important;
+          }
+        }
+      }
+    }
   }
 </style>
-
-
