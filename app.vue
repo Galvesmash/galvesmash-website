@@ -32,9 +32,7 @@
 </script>
 
 <template>
-  <NuxtLayout
-    :name="currentLayout"
-  >
+  <nuxt-layout :name="currentLayout">
     <v-app
       :class="[ { 'pt-md-app': !isMobileView }, `pt-16 v-layout--${currentLayout}`]"
       :theme="currentTheme"
@@ -42,10 +40,10 @@
       <side-menu />
 
       <v-container class="px-5 px-md-16 py-0" max-width="1440">
-        <NuxtPage />
+        <nuxt-page />
       </v-container>
     </v-app>
-  </NuxtLayout>
+  </nuxt-layout>
 </template>
 
 <style lang="scss">
