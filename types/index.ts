@@ -24,6 +24,7 @@ export interface LocaleStore {
 
 export interface ProjectObject {
   cover: string
+  href: string
   subtitle: string
   title: string
 }
