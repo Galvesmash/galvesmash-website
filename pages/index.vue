@@ -50,7 +50,7 @@
       },
       {
         cover: 'cover-fortune-machine.png',
-        href: 'https://github.com/Galvesmash/fortune-machine/tree/develop?tab=readme-ov-file#fortune-machine',
+        href: 'https://github.com/Galvesmash/fortune-machine?tab=readme-ov-file#fortune-machine',
         subtitle: 'Vue.js',
         title: 'Fortune Machine'
       },
