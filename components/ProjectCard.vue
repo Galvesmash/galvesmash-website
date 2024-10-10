@@ -21,12 +21,15 @@
   <v-hover v-slot="{ isHovering, props }">
     <v-card
       v-bind="props"
+      :href="propsData.href"
+      :style="{ boxShadow: '0 0 2px black' }"
       class="mx-auto"
       color="dark-lavender"
       height="300"
       link
       max-width="380"
       rounded="lg"
+      target="_blank"
       @click="handleInteraction"
     >
       <v-img

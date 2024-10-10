@@ -17,6 +17,11 @@
   themeStore.setCurrentLayout('default')
 
   function changeRoute(route: string = 'project') {
+    if (route === 'project') {
+      // TODO: Finish project page
+      return
+    }
+
     router.push({ path: `/${route}` })
   }
 
@@ -32,19 +37,28 @@
   onMounted(() => {
     projectStore.setProjectList([
       {
-        title: 'Breathe',
+        cover: 'cover-breathe.png',
+        href: 'https://galvesmash.itch.io/breathe',
         subtitle: 'Unity3D',
-        cover: 'cover-breathe.png'
+        title: 'Breathe'
       },
       {
-        title: 'Fortune Machine',
+        cover: 'cover-galvesmash-website.png',
+        href: 'https://github.com/Galvesmash/galvesmash-website?tab=readme-ov-file#galvesmash-website',
         subtitle: 'Vue.js',
-        cover: 'cover-fortune-machine.png'
+        title: 'Galvesmash Website'
       },
       {
-        title: 'Fortune Teller',
+        cover: 'cover-fortune-machine.png',
+        href: 'https://github.com/Galvesmash/fortune-machine/tree/develop?tab=readme-ov-file#fortune-machine',
         subtitle: 'Vue.js',
-        cover: 'cover-fortune-teller.png'
+        title: 'Fortune Machine'
+      },
+      {
+        cover: 'cover-fortune-teller.png',
+        href: 'https://github.com/Galvesmash/fortune-teller-game?tab=readme-ov-file#fortune-teller-game',
+        subtitle: 'Vue.js',
+        title: 'Fortune Teller'
       }
     ])
   })
@@ -126,6 +140,7 @@
       >
         <project-card
           :cover="project.cover"
+          :href="project.href"
           :subtitle="project.subtitle"
           :title="project.title"
           @handle-interaction="changeRoute()"
