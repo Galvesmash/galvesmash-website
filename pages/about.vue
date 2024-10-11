@@ -7,10 +7,11 @@
   })
 
   const { t } = useI18n()
+  const config = useRuntimeConfig()
   const themeStore = useThemeStore()
 
-  const coverImage = computed(() => '/images/me.png')
-  const lazyImage = computed(() => '/images/lazy-me.png')
+  const coverImage = computed(() => `${config.public.imagesPath}images/me.png`)
+  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me.png`)
 
   themeStore.setCurrentLayout('default')
 </script>
