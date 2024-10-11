@@ -7,8 +7,8 @@
 
   const propsData = defineProps<ProjectObject>()
 
-  const coverImage = computed(() => `_nuxt/assets/images/${propsData.cover}`)
-  const lazyImage = computed(() => `_nuxt/assets/images/lazy-${propsData.cover}`)
+  const coverImage = computed(() => `/images/${propsData.cover}`)
+  const lazyImage = computed(() => `/images/lazy-${propsData.cover}`)
 
   function handleInteraction() {
     projectStore.setSelectedProject(propsData.title)

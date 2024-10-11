@@ -9,8 +9,8 @@
   const { t } = useI18n()
   const themeStore = useThemeStore()
 
-  const coverImage = computed(() => '_nuxt/assets/images/me.png')
-  const lazyImage = computed(() => '_nuxt/assets/images/lazy-me.png')
+  const coverImage = computed(() => '/images/me.png')
+  const lazyImage = computed(() => '/images/lazy-me.png')
 
   themeStore.setCurrentLayout('default')
 </script>
