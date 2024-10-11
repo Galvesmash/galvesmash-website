@@ -9,14 +9,14 @@
 
 <template>
   <section class="w-100">
-    <v-container class="pa-0 px-md-10" max-width="1280">
+    <v-container class="no-user-select pa-0 px-md-10" max-width="1280">
       <v-row
         v-for="index in listLength"
         :key="index"
         class="ma-0 no-user-select"
       >
         <v-col
-          class="mb-4 mb-md-0 pa-0 pr-md-0 pr-lg-6 text-md-right"
+          class="mb-4 mb-md-0 no-user-select pa-0 pr-md-0 pr-lg-6 text-md-right"
           color="secondary"
           cols="12"
           md="3"
@@ -33,7 +33,7 @@
         </v-col>
 
         <v-col
-          class="pa-0 pl-md-6 pl-lg-0"
+          class="no-user-select pa-0 pl-md-6 pl-lg-0"
           color="secondary"
           cols="12"
           md="9"
