@@ -2,13 +2,15 @@
   import { useProjectStore } from '~/store'
   import type { ProjectObject } from '~/types'
 
+  const config = useRuntimeConfig()
+
   const emit = defineEmits(['handle-interaction'])
   const projectStore = useProjectStore()
 
   const propsData = defineProps<ProjectObject>()
 
-  const coverImage = computed(() => `/images/${propsData.cover}`)
-  const lazyImage = computed(() => `/images/lazy-${propsData.cover}`)
+  const coverImage = computed(() => `${config.public.imagesPath}images/${propsData.cover}`)
+  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-${propsData.cover}`)
 
   function handleInteraction() {
     projectStore.setSelectedProject(propsData.title)
