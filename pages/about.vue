@@ -18,7 +18,7 @@
 
 <template>
   <section class="py-8 py-md-12">
-    <v-row class="ma-0">
+    <v-row class="ma-0 no-user-select">
       <v-col class="mb-8 mb-md-6 pa-0" sm="12" md="4" cols="12">
         <v-img
           :alt="t('general.imageAlt')"

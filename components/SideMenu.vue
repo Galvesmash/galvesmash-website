@@ -53,7 +53,7 @@
       </h2>
     </div>
 
-    <v-divider />
+    <v-divider class="no-user-select" />
 
     <div class="d-flex flex-column mt-2">
       <v-btn
