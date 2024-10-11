@@ -54,9 +54,9 @@
         cols="12"
         md="5"
       >
-        <h3 class="mb-6 font-italic font-weight-bold text-h4 text-primary text-uppercase">{{ t('contact.title') }}</h3>
+        <h3 class="mb-6 font-italic font-weight-bold no-user-select text-h4 text-primary text-uppercase">{{ t('contact.title') }}</h3>
 
-        <p class="font-italic text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
+        <p class="font-italic no-user-select text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
           {{ t('contact.text') }}
         </p>
 
@@ -68,7 +68,7 @@
           {{ t('contact.phone') }}
         </p>
 
-        <p class="font-italic mt-1 text-headline-general text-secondary">
+        <p class="font-italic mt-1 no-user-select text-headline-general text-secondary">
           {{ t('contact.location') }}
         </p>
 

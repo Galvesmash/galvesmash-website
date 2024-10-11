@@ -100,6 +100,13 @@
     letter-spacing: normal !important;
   }
 
+  .no-user-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
   .pt-md-app {
     padding-top: 203px !important;
   }
