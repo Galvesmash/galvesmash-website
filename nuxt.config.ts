@@ -4,8 +4,7 @@ process.env.VUE_APP_VERSION = require('./package.json').version
 
 export default defineNuxtConfig({
   app: {
-    baseURL: process.env.NODE_ENV === "production" ? "/galvesmash-website/" : "/",
-    buildAssetsDir: 'assets'
+    baseURL: process.env.NODE_ENV === "production" ? "/galvesmash-website/" : "/"
   },
 
   build: {
