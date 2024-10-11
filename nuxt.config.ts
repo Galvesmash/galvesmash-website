@@ -1,13 +1,18 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
+  app: {
+    baseURL: process.env.NODE_ENV === "production" ? "/galvesmash-website/" : "/",
+    buildAssetsDir: 'assets'
+  },
+
   build: {
     transpile: [
       '@fortawesome/vue-fontawesome',
       'vuetify'
     ],
   },
-  
+
   i18n: {
     vueI18n: './i18n.config.js',
     locales: ['en', 'pt-br'],
