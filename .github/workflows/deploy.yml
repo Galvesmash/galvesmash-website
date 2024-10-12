@@ -8,13 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: ${{ secrets.NODE_ENV }}
-      VUE_APP_CV_LINK: ${{ secrets.VUE_APP_CV_LINK }}
-      VUE_APP_DEFAULT_LOCALE: ${{ secrets.VUE_APP_DEFAULT_LOCALE }}
-      VUE_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.VUE_APP_EMAILJS_PUBLIC_KEY }}
-      VUE_APP_EMAILJS_SERVICE: ${{ secrets.VUE_APP_EMAILJS_SERVICE }}
-      VUE_APP_EMAILJS_TEMPLATE: ${{ secrets.VUE_APP_EMAILJS_TEMPLATE }}
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
@@ -27,6 +20,13 @@ jobs:
         run: npm install
       - name: Build Nuxt.js
         run: npm build --preset github_pages
+        env:
+          NODE_ENV: ${{ secrets.NODE_ENV }}
+          VUE_APP_CV_LINK: ${{ secrets.VUE_APP_CV_LINK }}
+          VUE_APP_DEFAULT_LOCALE: ${{ secrets.VUE_APP_DEFAULT_LOCALE }}
+          VUE_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.VUE_APP_EMAILJS_PUBLIC_KEY }}
+          VUE_APP_EMAILJS_SERVICE: ${{ secrets.VUE_APP_EMAILJS_SERVICE }}
+          VUE_APP_EMAILJS_TEMPLATE: ${{ secrets.VUE_APP_EMAILJS_TEMPLATE }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
