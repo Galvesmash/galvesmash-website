@@ -5,14 +5,6 @@ on:
   push:
     branches:
       - main
-env:
-  # Setting an environment variable with the value of a configuration variable
-  NODE_ENV: ${{ vars.NODE_ENV }}
-  VUE_APP_CV_LINK: ${{ vars.VUE_APP_CV_LINK }}
-  VUE_APP_DEFAULT_LOCALE: ${{ vars.VUE_APP_DEFAULT_LOCALE }}
-  VUE_APP_EMAILJS_PUBLIC_KEY: ${{ vars.VUE_APP_EMAILJS_PUBLIC_KEY }}
-  VUE_APP_EMAILJS_SERVICE: ${{ vars.VUE_APP_EMAILJS_SERVICE }}
-  VUE_APP_EMAILJS_TEMPLATE: ${{ vars.VUE_APP_EMAILJS_TEMPLATE }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,6 +17,13 @@ jobs:
       # Pick your own package manager and build script
       - run: npm install
       - run: npx nuxt build --preset github_pages
+        env:
+          NODE_ENV: ${{ secrets.NODE_ENV }}
+          VUE_APP_CV_LINK: ${{ secrets.VUE_APP_CV_LINK }}
+          VUE_APP_DEFAULT_LOCALE: ${{ secrets.VUE_APP_DEFAULT_LOCALE }}
+          VUE_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.VUE_APP_EMAILJS_PUBLIC_KEY }}
+          VUE_APP_EMAILJS_SERVICE: ${{ secrets.VUE_APP_EMAILJS_SERVICE }}
+          VUE_APP_EMAILJS_TEMPLATE: ${{ secrets.VUE_APP_EMAILJS_TEMPLATE }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
