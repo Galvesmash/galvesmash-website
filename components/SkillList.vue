@@ -45,7 +45,7 @@
       >
         <v-icon color="secondary" :icon="skill.icon" :size="isMobileView ? 32 : 80" />
 
-        <h4 class="font-italic text-caption text-md-h6 text-secondary">{{ t(`about.skills.list.${skill.translation}`) }}</h4>
+        <h4 class="font-italic no-user-select text-caption text-md-h6 text-secondary">{{ t(`about.skills.list.${skill.translation}`) }}</h4>
       </v-col>
     </v-row>
   </section>

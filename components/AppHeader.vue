@@ -40,15 +40,22 @@
   }
 
   const handleScroll = () => {
+    isUserScrolling.value = (window.scrollY > TOP_THRESHOLD)
+    
     if (isMobileView.value) return
 
-    isUserScrolling.value = (window.scrollY > TOP_THRESHOLD)
     desktopHeaderHeight.value = isUserScrolling.value ? MOBILE_HEADER_HEIGHT : DESKTOP_HEADER_HEIGHT
     desktopLogoHeight.value = isUserScrolling.value ? MOBILE_LOGO_HEIGHT : DESKTOP_LOGO_HEIGHT
     desktopLogoWidth.value = isUserScrolling.value ? MOBILE_LOGO_WIDTH : DESKTOP_LOGO_WIDTH
   }
 
   onMounted(() => {
+    isUserScrolling.value = (window.scrollY > TOP_THRESHOLD)
+
+    if (isUserScrolling.value) {
+      handleScroll()
+    }
+
     window.addEventListener('scroll', handleScroll)
   })
 
@@ -59,7 +66,7 @@
 
 <template>
   <v-toolbar
-    :class="[ isMobileView || isUserScrolling ? 'bg-background' : 'bg-transparent border-opacity-0' ]"
+    :class="[{ 'border-opacity-0': !isUserScrolling }, isMobileView || isUserScrolling ? 'bg-background' : 'bg-transparent' ]"
     :height="isMobileView ? MOBILE_HEADER_HEIGHT : desktopHeaderHeight"
     :style="{ transition: 'all .3s', zIndex: '10' }"
     class="border-b position-fixed"
@@ -110,7 +117,7 @@
                   :class="{ 'opacity-0': isUserScrolling }"
                   class="position-absolute right-0 top-0 w-66 mr-1 pt-1 pt-md-0"
                 >
-                  <h6 class="d-flex font-italic justify-space-between no-letter-spacing text-headline text-no-wrap text-secondary text-uppercase w-100">
+                  <h6 class="d-flex font-italic justify-space-between no-letter-spacing no-user-select text-headline text-no-wrap text-secondary text-uppercase w-100">
                     <span v-for="(letter, index) in t('general.headline.frontendDeveloper')" :key="index">
                       {{ letter }}
                     </span>
@@ -136,7 +143,7 @@
 
         <v-container
           :class="{ 'position-absolute right-0': !isMobileView }"
-          class="align-center d-flex h-100 justify-end ml-6 ml-md-0 my-0 pa-0"
+          class="align-center d-flex h-100 justify-end mr-0 my-0 pa-0"
           max-height="60"
           max-width="100"
         >

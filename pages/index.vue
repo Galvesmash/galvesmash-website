@@ -86,20 +86,20 @@
 
       <v-col class="mt-10 mt-md-0 pa-0" cols="12" md="7">
         <h2
-          class="font-italic font-weight-thin mb-2 text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
+          class="font-italic font-weight-thin mb-2 no-user-select text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
         >
           {{ t('general.presentation.name') }}
         </h2>
         
         <h2
-          class="font-italic mb-6 mb-md-10 text-center text-h4 text-md-h2 text-md-start text-secondary"
+          class="font-italic mb-6 mb-md-10 no-user-select text-center text-h4 text-md-h2 text-md-start text-secondary"
         >
           <strong class="font-weight-bold text-capitalize">{{ t('general.headline.frontendDeveloper') }}</strong>
         </h2>
 
         <h1
           :style="{ whiteSpace: 'pre-line' }"
-          class="text-center font-italic text-body-1 text-md-h6 text-md-start text-secondary"
+          class="text-center font-italic no-user-select text-body-1 text-md-h6 text-md-start text-secondary"
         >
           {{ t('general.presentation.title') }}
         </h1>
@@ -127,9 +127,11 @@
       </v-col>
     </v-row>
 
-    <v-row class="ma-0 pt-10 pt-md-16">
+    <v-row class="ma-0 no-user-select pt-10 pt-md-16">
       <v-col class="pa-0 mb-6 mb-md-12" cols="12">
-        <p class="font-italic text-center text-h6 text-md-h3 text-secondary">{{ t('general.someProjectsWorked') }}:</p>
+        <p class="font-italic no-user-select text-center text-h6 text-md-h3 text-secondary">
+          {{ t('general.someProjectsWorked') }}:
+        </p>
       </v-col>
       <v-col
         v-for="(project, index) in projectList"

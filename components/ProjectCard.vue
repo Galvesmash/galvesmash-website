@@ -50,11 +50,11 @@
         :style="{ transition: 'all .3s' }"
         class="h-100 justify-center opacity-0 position-relative text-center"
       >
-        <v-card-title class="mb-3 text-headline-title text-grey-lighten-4">
+        <v-card-title class="mb-3 no-user-select text-headline-title text-grey-lighten-4">
           {{ propsData.title }}
         </v-card-title>
 
-        <v-card-subtitle class="font-weight-bold text-headline-subtitle text-primary" :style="{ textShadow: '0 0 6px black' }">
+        <v-card-subtitle class="font-weight-bold no-user-select text-headline-subtitle text-primary" :style="{ textShadow: '0 0 6px black' }">
           {{ propsData.subtitle }}
         </v-card-subtitle>
       </v-card-item>

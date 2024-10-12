@@ -2,9 +2,12 @@
 <script setup lang="ts">
   import emailjs from 'emailjs-com'
   import { useI18n } from 'vue-i18n'
+  import { useGeneralStore } from '~/store'
 
   const { t } = useI18n()
   const config = useRuntimeConfig()
+  const generalStore = useGeneralStore()
+  const { isMobileView } = storeToRefs(generalStore)
 
   const email = ref('')
   const loading = ref(false)
@@ -54,9 +57,9 @@
         cols="12"
         md="5"
       >
-        <h3 class="mb-6 font-italic font-weight-bold text-h4 text-primary text-uppercase">{{ t('contact.title') }}</h3>
+        <h3 class="mb-6 font-italic font-weight-bold no-user-select text-h4 text-primary text-uppercase">{{ t('contact.title') }}</h3>
 
-        <p class="font-italic text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
+        <p class="font-italic no-user-select text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
           {{ t('contact.text') }}
         </p>
 
@@ -68,16 +71,18 @@
           {{ t('contact.phone') }}
         </p>
 
-        <p class="font-italic mt-1 text-headline-general text-secondary">
+        <p class="font-italic mt-1 no-user-select text-headline-general text-secondary">
           {{ t('contact.location') }}
         </p>
 
-        <v-container class="mt-6 mt-md-10 pa-0 px-md-16">
+        <v-container
+          :max-width="isMobileView ? '100%' : '360px'"
+          class="mt-6 mt-md-10 pa-0 px-md-16"
+        >
           <v-btn
             :href="config.public.cvLink"
             class="font-italic font-weight-bold w-100"
             color="primary"
-            max-width="360px"
             target="_blank"
             variant="outlined"
           >
@@ -95,13 +100,16 @@
         md="7"
       >
         <v-form class="d-flex flex-column justify-space-between	h-100" @submit.prevent="sendEmail">
-          <v-container class="ma-0 pa-0" max-width="650">
+          <v-container
+            :max-width="isMobileView ? '100%' : '650px'"
+            class="ma-0 pa-0"
+          >
             <v-text-field
               v-model="name"
               :label="t('contact.form.name')"
               :rules="[requiredRule]"
               base-color="secondary"
-              class="mb-1"
+              class="mb-1 no-user-select"
               color="primary"
               density="compact"
               height="40px"
@@ -114,7 +122,7 @@
               :label="t('contact.form.email')"
               :rules="[requiredRule, emailRule]"
               base-color="secondary"
-              class="mb-1"
+              class="mb-1 no-user-select"
               color="primary"
               density="compact"
               height="40px"
@@ -127,7 +135,7 @@
               :label="t('contact.form.message')"
               :rules="[requiredRule, maxCharactersRule]"
               base-color="secondary"
-              class="mb-1"
+              class="mb-1 no-user-select"
               color="primary"
               density="compact"
               name="message"

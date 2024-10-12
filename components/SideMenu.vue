@@ -43,16 +43,17 @@
         color="secondary"
         height="52"
         width="140"
+        @click="changeRoute()"
       />
 
-      <h2 class="d-flex font-italic justify-space-between no-letter-spacing text-headline text-secondary text-uppercase w-100">
+      <h2 class="d-flex font-italic justify-space-between no-letter-spacing no-user-select text-headline text-secondary text-uppercase w-100">
         <span v-for="(letter, index) in t('general.headline.frontendDeveloper')" :key="index">
           {{ letter }}
         </span>
       </h2>
     </div>
 
-    <v-divider />
+    <v-divider class="no-user-select" />
 
     <div class="d-flex flex-column mt-2">
       <v-btn
