@@ -27,7 +27,7 @@ jobs:
           export VUE_APP_EMAILJS_SERVICE=${{ secrets.VUE_APP_EMAILJS_SERVICE }}
           export VUE_APP_EMAILJS_TEMPLATE=${{ secrets.VUE_APP_EMAILJS_TEMPLATE }}
       - name: Build Nuxt.js
-        run: npm build --preset github_pages
+        run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
