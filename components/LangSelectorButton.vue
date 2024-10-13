@@ -43,7 +43,7 @@
           :value="index"
           @click="selectLanguage(item)"
         >
-          <v-list-item-title>{{ t(`general.language.${item}`) }}</v-list-item-title>
+          <v-list-item-title class="no-user-select">{{ t(`general.language.${item}`) }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
