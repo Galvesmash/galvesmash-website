@@ -56,41 +56,41 @@
 
   .text-headline {
     font-size: 12px !important;
-    font-weight: 100 !important;
+    font-weight: 100;
     letter-spacing: 11px !important;
     line-height: 10px !important;
 
     &-footer {
       font-size: 10px !important;
-      font-weight: 400 !important;
+      font-weight: 400;
       letter-spacing: 1.67px !important;
       line-height: 16px !important;
     }
 
     &-general {
       font-size: 15px !important;
-      font-weight: 300 !important;
+      font-weight: 300;
       letter-spacing: 2px !important;
       line-height: 18px !important;
     }
 
     &-small {
       font-size: 10px !important;
-      font-weight: 100 !important;
+      font-weight: 100;
       letter-spacing: 9px !important;
       line-height: 10px !important;
     }
 
     &-subtitle {
       font-size: 16px !important;
-      font-weight: 500 !important;
+      font-weight: 500;
       letter-spacing: 4px !important;
       line-height: 18px !important;
     }
 
     &-title {
       font-size: 26px !important;
-      font-weight: 700 !important;
+      font-weight: 700;
       letter-spacing: 9px !important;
       line-height: 28px !important;
     }
@@ -109,6 +109,10 @@
 
   .pt-md-app {
     padding-top: 203px !important;
+  }
+
+  .text-pre-wrap {
+    white-space: pre-wrap !important;
   }
 
   .v-field-label {

@@ -16,6 +16,7 @@ export const general = {
     en: 'English',
     'pt-br': 'Português',
   },
+  learnMore: 'Saiba mais',
   menu: {
     about: 'Sobre',
     contact: 'Contato'
