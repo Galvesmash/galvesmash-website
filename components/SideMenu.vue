@@ -58,7 +58,7 @@
     <div class="d-flex flex-column mt-2">
       <v-btn
         color="secondary"
-        class="font-italic justify-start text-headline-subtitle"
+        class="font-italic justify-start no-user-select text-headline-subtitle"
         variant="text"
         @click="changeRoute('about')"
       >
@@ -67,7 +67,7 @@
 
       <v-btn
         color="secondary"
-        class="font-italic justify-start text-headline-subtitle"
+        class="font-italic justify-start no-user-select text-headline-subtitle"
         variant="text"
         @click="scrollToBottom"
       >
@@ -78,7 +78,7 @@
     <template v-slot:append>
       <v-divider />
 
-      <p class="font-italic py-3 px-4 text-caption text-secondary">v{{ config.public.version }}</p>
+      <p class="font-italic no-user-select py-3 px-4 text-caption text-secondary">v{{ config.public.version }}</p>
     </template>
   </v-navigation-drawer>
 </template>
