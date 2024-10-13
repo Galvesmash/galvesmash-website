@@ -63,11 +63,11 @@
           {{ t('contact.text') }}
         </p>
 
-        <p class="font-italic mt-6 mt-md-14 text-headline-general text-secondary">
-          galvesmash.dev@gmail.com
+        <p class="font-italic mt-6 mt-md-14 opacity-100 pa-0 no-user-select text-decoration-underline text-headline-general text-none text-secondary">
+          {{ t('contact.email.name') }}@{{ t('contact.email.provider') }}
         </p>
 
-        <p class="font-italic mt-1 text-headline-general text-secondary">
+        <p class="font-italic mt-1 opacity-100 no-user-select pa-0 text-decoration-underline text-headline-general text-none text-secondary">
           {{ t('contact.phone') }}
         </p>
 

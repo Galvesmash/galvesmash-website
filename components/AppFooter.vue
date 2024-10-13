@@ -29,7 +29,7 @@
               v-bind="props"
               :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
               :style="{ transition: 'all .3s' }"
-              class="mb-1 opacity-100 pa-0 text-capitalize text-headline-footer"
+              class="mb-1 opacity-100 pa-0 text-capitalize text-decoration-underline text-headline-footer"
               density="compact"
               height="13px"
               href="https://www.ttarmann.com"
@@ -38,6 +38,8 @@
               variant="plain"
             >
               {{ t('general.footer.tarmann') }}
+
+              <v-icon class="ml-1" color="secondary" icon="fa-solid fa-up-right-from-square" size="8" />
             </v-btn>
           </v-hover>
         </p>

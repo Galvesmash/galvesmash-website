@@ -6,6 +6,10 @@ export const contact = {
     name: 'Name',
     send: 'Send',
   },
+  email: {
+    name: 'galvesmash.dev',
+    provider: 'gmail.com',
+  },
   error: {
     email: 'Invalid email.',
     max: 'Max 3200 characters.',
