@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
+  import ProjectCard from '~/components/ProjectCard'
+  import ProjectCardDesktop from '~/components/ProjectCardDesktop'
   import { useGeneralStore, useProjectStore, useThemeStore } from '~/store'
 
   definePageMeta({
@@ -28,7 +30,6 @@
 
   const coverImage = computed(() => `${config.public.imagesPath}images/me-small.png`)
   const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me-small.png`)
-  const smCols = computed(() => projectList.value.length >=2 ? '6' : '12')
   const mdCols = computed(() => {
     if (projectList.value.length >= 3) return '4'
 
@@ -137,11 +138,12 @@
         v-for="(project, index) in projectList"
         :key="index"
         :md="mdCols"
-        :sm="smCols"
         class="pb-2 pt-0 px-1"
         cols="12"
+        sm="12"
       >
-        <project-card
+        <component
+          :is="isMobileView ? ProjectCard : ProjectCardDesktop"
           :cover="project.cover"
           :href="project.href"
           :subtitle="project.subtitle"
