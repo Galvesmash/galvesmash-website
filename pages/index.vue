@@ -101,7 +101,7 @@
     <v-row class="ma-0">
       <v-col class="d-flex justify-md-end pa-0 pr-md-16" cols="12" md="5">
         <v-img
-          :alt="t('general.imageAlt')"
+          :alt="t('general.presentation.imageAlt')"
           :lazy-src="lazyImage"
           :src="coverImage"
           :style="{ filter: 'contrast(0.8)' }"

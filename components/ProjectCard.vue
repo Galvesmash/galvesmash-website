@@ -49,7 +49,7 @@
             target="_blank"
             variant="outlined"
           >
-            {{ t('general.learnMore') }}
+            {{ t('general.projects.learnMore') }}
 
             <v-icon class="ml-2" color="primary" icon="fa-solid fa-up-right-from-square" size="11" />
           </v-btn>
@@ -64,6 +64,7 @@
         size="160"
       >
         <v-img
+          :alt="t('general.projects.imageAlt')"
           :lazy-src="lazyImage"
           :src="coverImage"
           cover

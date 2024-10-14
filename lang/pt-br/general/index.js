@@ -23,12 +23,10 @@ export const general = {
     madeBy: 'Feito por Gabriel Galves Taliatti\nDesenhado por',
     tarmann: 'Studiotarmann'
   },
-  imageAlt: 'Foto de Gabriel Galves Taliatti',
   language: {
     en: 'English',
     'pt-br': 'Português',
   },
-  learnMore: 'Saiba mais',
   menu: {
     about: 'Sobre',
     contact: 'Contato'
@@ -36,8 +34,13 @@ export const general = {
   present: 'Presente',
   presentation: {
     button: 'Confira mais sobre mim',
+    imageAlt: 'Foto de Gabriel Galves Taliatti',
     name: 'Gabriel Galves Taliatti',
     title: 'Mais de 8 anos desenvolvendo\nexperiências para web apps e sites.'
+  },
+  projects: {
+    imageAlt: 'Imagem do projeto',
+    learnMore: 'Saiba mais'
   },
   seo: {
     title: 'Galvesmash: Desenvolvedor frontend',
