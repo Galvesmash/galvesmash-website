@@ -27,6 +27,10 @@ export const general = {
     name: 'Gabriel Galves Taliatti',
     title: 'Mais de 8 anos desenvolvendo\nexperiências para web apps e sites.'
   },
+  seo: {
+    title: 'Galvesmash: Desenvolvedor frontend',
+    description: 'Mais de 8 anos desenvolvendo experiências para web apps e sites.'
+  },
   someProjectsWorked: 'Alguns projetos em que trabalhei',
   soon: 'Em breve'
 }

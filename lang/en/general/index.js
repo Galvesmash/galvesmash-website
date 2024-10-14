@@ -28,6 +28,10 @@ export const general = {
     name: 'Gabriel Galves Taliatti',
     title: 'Over 8 years developing experiences\nfor web apps and sites.'
   },
+  seo: {
+    title: 'Galvesmash: Frontend developer',
+    description: 'Over 8 years developing experiences for web apps and sites.'
+  },
   someProjectsWorked: 'Some projects I’ve worked on',
   soon: 'Soon'
 }

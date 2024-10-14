@@ -3,29 +3,6 @@ export const about = {
     title: 'Prazer em te conhecer',
     text: 'Mais de 8 anos desenvolvendo aplicativos web e sites com a melhor experiência do usuário para startups e empresas. Minha experiência profissional e dedicação me permitem oferecer soluções de alta qualidade e contribuir para projetos inovadores.\n\nMais experiente como frontend, possuo habilidades em JavaScript, TypeScript, Vue.js, Nuxt.js, Vuetify.js, Vuex, SEO, Pinia, React.js, Next.js, Redux, Tailwind CSS e CSS pré-processadores como LESS, SASS, e SCSS. Além disso, tenho proficiência com as metodologias Git, Scrum, SEO e Agile.\n\nPara testar, tenho experiência com Vue-Test-Utils, Jest, Vitest e Cypress.\n\nTambém trabalhei por cerca de 4 anos como desenvolvedor Fullstack, minhas experiências são com Node.js, PHP e Laravel.\n\nComo desenvolvedor de jogos, tenho cerca de 4 anos de experiência em Unity3D usando C# e 3 anos com Blender3D.\n\nSou formado em Games e Desenvolvimento de Software pelo Senac e em Game Design pelo Colégio Fecap.',
   },
-  skills: {
-    title: 'Habilidades',
-    list: {
-      html: 'HTML5',
-      javascript: 'JavaScript',
-      typescript: 'TypeScript',
-      vue: 'Vue.js',
-      react: 'React',
-      nuxt: 'Nuxt',
-      css: 'CSS3',
-      sass: 'Sass',
-      less: 'Less',
-      vuetify: 'Vuetify',
-      tailwind: 'Tailwind CSS',
-      responsive: 'Design Responsivo',
-      seo: 'SEO',
-      git: 'Git',
-      github: 'Github',
-      jira: 'Jira',
-      unity: 'Unity3D',
-      blender: 'Blender3D'
-    }
-  },
   experience: {
     title: 'Experiência',
     list: {
@@ -85,6 +62,33 @@ export const about = {
         start: '03-01-2014',
         text: 'Mediação de atividades educativas no campo dos jogos, realização de eventos com o objetivo de educação a partir da direção dos jogos.'
       }
+    }
+  },
+  seo: {
+    title: 'Prazer em te conhecer',
+    description: 'Minha experiência profissional e dedicação me permitem oferecer soluções de alta qualidade e contribuir para projetos inovadores.'
+  },
+  skills: {
+    title: 'Habilidades',
+    list: {
+      html: 'HTML5',
+      javascript: 'JavaScript',
+      typescript: 'TypeScript',
+      vue: 'Vue.js',
+      react: 'React',
+      nuxt: 'Nuxt',
+      css: 'CSS3',
+      sass: 'Sass',
+      less: 'Less',
+      vuetify: 'Vuetify',
+      tailwind: 'Tailwind CSS',
+      responsive: 'Design Responsivo',
+      seo: 'SEO',
+      git: 'Git',
+      github: 'Github',
+      jira: 'Jira',
+      unity: 'Unity3D',
+      blender: 'Blender3D'
     }
   }
 }
