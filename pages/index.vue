@@ -63,8 +63,8 @@
     window.dataLayer = window?.dataLayer || []
 
     if (config.public.nodeEnv === 'production') {
-      window.dataLayer.push("js", new Date())
-      window.dataLayer.push("config", config.public.googleAnalyticsId)
+      window.dataLayer.push('js', new Date())
+      window.dataLayer.push('config', config.public.googleAnalyticsId)
     }
 
     projectStore.setProjectList([
