@@ -34,7 +34,13 @@ export default defineNuxtConfig({
     },
     '@nuxtjs/i18n',
     '@pinia/nuxt',
+    'nuxt-gtag',
   ],
+
+  gtag: {
+    enabled: process.env.NODE_ENV === 'production',
+    id: process.env.VUE_APP_GA_ID
+  },
 
   runtimeConfig: {
     public: {
@@ -44,7 +50,9 @@ export default defineNuxtConfig({
         serviceKey: process.env.VUE_APP_EMAILJS_SERVICE,
         templateKey: process.env.VUE_APP_EMAILJS_TEMPLATE
       },
+      googleAnalyticsId: process.env.VUE_APP_GA_ID,
       imagesPath: process.env.NODE_ENV === "production" && !process.env.VUE_APP_DOMAIN ? "/galvesmash-website/" : "/",
+      nodeEnv: process.env.NODE_ENV,
       version: process.env.VUE_APP_VERSION,
     }
   },

@@ -10,9 +10,17 @@
   const { t, locale } = useI18n()
   const config = useRuntimeConfig()
 
+  const gaObject = config.public.nodeEnv === 'production'
+    ? {
+        src: `https://www.googletagmanager.com/gtag/js?id=${config.public.googleAnalyticsId}`,
+        async: true,
+      }
+    : {}
+
   useHead({
     htmlAttrs: { lang: `${locale.value}` },
-    link: [{ rel: 'canonical', href: 'https://galvesmash.com/about' }]
+    link: [{ rel: 'canonical', href: 'https://galvesmash.com/about' }],
+    script: [ gaObject ]
   })
 
   useSeoMeta({
@@ -29,6 +37,15 @@
   const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me.png`)
 
   themeStore.setCurrentLayout('default')
+
+  onMounted(() => {
+    window.dataLayer = window?.dataLayer || []
+
+    if (config.public.nodeEnv === 'production') {
+      window.dataLayer.push("js", new Date())
+      window.dataLayer.push("config", config.public.googleAnalyticsId)
+    }
+  })
 </script>
 
 <template>
