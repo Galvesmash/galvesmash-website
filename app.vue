@@ -3,6 +3,12 @@
   import { useGeneralStore, useThemeStore } from '~/store'
   import { storeToRefs } from 'pinia'
 
+  declare global {
+    interface Window {
+      dataLayer: any
+    }
+  }
+
   const theme = useTheme()
   const generalStore = useGeneralStore()
   const themeStore = useThemeStore()

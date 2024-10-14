@@ -13,9 +13,17 @@
   const config = useRuntimeConfig()
   const router = useRouter()
 
+  const gaObject = config.public.nodeEnv === 'production'
+    ? {
+        src: `https://www.googletagmanager.com/gtag/js?id=${config.public.googleAnalyticsId}`,
+        async: true,
+      }
+    : {}
+
   useHead({
     htmlAttrs: { lang: `${locale.value}` },
-    link: [{ rel: 'canonical', href: 'https://galvesmash.com' }]
+    link: [{ rel: 'canonical', href: 'https://galvesmash.com' }],
+    script: [ gaObject ]
   })
 
   useSeoMeta({
@@ -52,6 +60,13 @@
   })
 
   onMounted(() => {
+    window.dataLayer = window?.dataLayer || []
+
+    if (config.public.nodeEnv === 'production') {
+      window.dataLayer.push("js", new Date())
+      window.dataLayer.push("config", config.public.googleAnalyticsId)
+    }
+
     projectStore.setProjectList([
       {
         cover: 'cover-breathe.png',
