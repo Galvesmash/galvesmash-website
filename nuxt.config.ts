@@ -44,7 +44,7 @@ export default defineNuxtConfig({
         serviceKey: process.env.VUE_APP_EMAILJS_SERVICE,
         templateKey: process.env.VUE_APP_EMAILJS_TEMPLATE
       },
-      imagesPath: process.env.NODE_ENV === "production" ? "/galvesmash-website/" : "/",
+      imagesPath: process.env.NODE_ENV === "production" && !process.env.VUE_APP_DOMAIN ? "/galvesmash-website/" : "/",
       version: process.env.VUE_APP_VERSION,
     }
   },

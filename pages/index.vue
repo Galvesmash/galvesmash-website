@@ -5,12 +5,27 @@
   import { useGeneralStore, useProjectStore, useThemeStore } from '~/store'
 
   definePageMeta({
-    layout: 'default'
+    layout: 'default',
+    name: 'galvesmash'
+  })
+  
+  const { t, locale } = useI18n()
+  const config = useRuntimeConfig()
+  const router = useRouter()
+
+  useHead({
+    htmlAttrs: { lang: `${locale.value}` },
+    link: [{ rel: 'canonical', href: 'https://galvesmash.com' }]
   })
 
-  const { t } = useI18n()
-  const router = useRouter()
-  const config = useRuntimeConfig()
+  useSeoMeta({
+    title: t('general.seo.title'),
+    ogTitle: t('general.seo.title'),
+    description: t('general.seo.description'),
+    ogDescription: t('general.seo.description'),
+    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me-small.png`
+  })
+
   const generalStore = useGeneralStore()
   const projectStore = useProjectStore()
   const themeStore = useThemeStore()

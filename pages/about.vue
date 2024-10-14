@@ -3,11 +3,26 @@
   import { useThemeStore } from '~/store'
 
   definePageMeta({
-    layout: 'default'
+    layout: 'default',
+    name: 'about'
   })
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const config = useRuntimeConfig()
+
+  useHead({
+    htmlAttrs: { lang: `${locale.value}` },
+    link: [{ rel: 'canonical', href: 'https://galvesmash.com/about' }]
+  })
+
+  useSeoMeta({
+    title: t('about.seo.title'),
+    ogTitle: t('about.seo.title'),
+    description: t('about.seo.description'),
+    ogDescription: t('about.seo.description'),
+    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me.png`
+  })
+
   const themeStore = useThemeStore()
 
   const coverImage = computed(() => `${config.public.imagesPath}images/me.png`)

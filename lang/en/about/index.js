@@ -3,29 +3,7 @@ export const about = {
     title: 'Nice to meet you',
     text: 'Over 8 years developing web apps and sites with the best user experience for start-ups and companies. My professional background and dedication enables me to deliver high-quality solutions and contribute to innovative projects.\n\nMore experienced as a frontend I’m skilled in JavaScript, TypeScript, Vue.js, Nuxt.js, Vuetify.js, Vuex, SEO, Pinia, React.js, Next.js, Redux, Tailwind CSS and CSS preprocessors like LESS, SASS, and SCSS. Additionally, I have proficiency with Git, Scrum, SEO and Agile methodologies.\n\nFor testing I have experience with Vue-Test-Utils, Jest, Vitest, and Cypress.\n\nI also worked for about 4 years as a Fullstack Developer, my experiences are with Node.js, PHP, and Laravel.\n\nAs a game developer I have about 4 years of experience in Unity3D using C# and 3 years with Blender3D.\n\nI hold a degree in Games and Software Development from Senac and Game Design from Fecap College.',
   },
-  skills: {
-    title: 'Skills',
-    list: {
-      html: 'HTML5',
-      javascript: 'JavaScript',
-      typescript: 'TypeScript',
-      vue: 'Vue.js',
-      react: 'React',
-      nuxt: 'Nuxt',
-      css: 'CSS3',
-      sass: 'Sass',
-      less: 'Less',
-      vuetify: 'Vuetify',
-      tailwind: 'Tailwind CSS',
-      responsive: 'Responsive Design',
-      seo: 'SEO',
-      git: 'Git',
-      github: 'Github',
-      jira: 'Jira',
-      unity: 'Unity3D',
-      blender: 'Blender3D'
-    }
-  },
+  
   experience: {
     title: 'Experience',
     list: {
@@ -85,6 +63,33 @@ export const about = {
         start: '03-01-2014',
         text: 'Mediation of educational activities in the field of games, conducting events with the purpose of education from the direction of games.'
       }
+    }
+  },
+  seo: {
+    title: 'Nice to meet you',
+    description: 'My professional background and dedication enables me to deliver high-quality solutions and contribute to innovative projects.'
+  },
+  skills: {
+    title: 'Skills',
+    list: {
+      html: 'HTML5',
+      javascript: 'JavaScript',
+      typescript: 'TypeScript',
+      vue: 'Vue.js',
+      react: 'React',
+      nuxt: 'Nuxt',
+      css: 'CSS3',
+      sass: 'Sass',
+      less: 'Less',
+      vuetify: 'Vuetify',
+      tailwind: 'Tailwind CSS',
+      responsive: 'Responsive Design',
+      seo: 'SEO',
+      git: 'Git',
+      github: 'Github',
+      jira: 'Jira',
+      unity: 'Unity3D',
+      blender: 'Blender3D'
     }
   }
 }
