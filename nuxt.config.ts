@@ -34,12 +34,18 @@ export default defineNuxtConfig({
     },
     '@nuxtjs/i18n',
     '@pinia/nuxt',
+    '@zadigetvoltaire/nuxt-gtm',
     'nuxt-gtag',
   ],
 
   gtag: {
     enabled: process.env.NODE_ENV === 'production',
-    id: process.env.VUE_APP_GA_ID
+    id: process.env.VUE_APP_GA_ID || ''
+  },
+
+  gtm: {
+    enabled: process.env.NODE_ENV === 'production',
+    id: process.env.VUE_APP_GTM_ID || ''
   },
 
   runtimeConfig: {

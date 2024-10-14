@@ -29,6 +29,7 @@ jobs:
           VUE_APP_EMAILJS_SERVICE: ${{ secrets.VUE_APP_EMAILJS_SERVICE }}
           VUE_APP_EMAILJS_TEMPLATE: ${{ secrets.VUE_APP_EMAILJS_TEMPLATE }}
           VUE_APP_GA_ID: ${{ secrets.VUE_APP_GA_ID }}
+          VUE_APP_GTM_ID: ${{ secrets.VUE_APP_GTM_ID }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
