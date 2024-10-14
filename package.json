@@ -38,6 +38,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@mdi/font": "^7.4.47",
     "@nuxtjs/i18n": "^8.0.0",
+    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.5.9"
   }
