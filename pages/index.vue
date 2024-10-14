@@ -117,15 +117,11 @@
       </v-col>
 
       <v-col class="mt-10 mt-md-0 pa-0" cols="12" md="7">
-        <h2
-          class="font-italic font-weight-thin mb-2 no-user-select text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
-        >
+        <h2 class="font-italic font-weight-thin mb-2 no-user-select text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary">
           {{ t('general.presentation.name') }}
         </h2>
         
-        <h1
-          class="font-italic mb-6 mb-md-10 no-user-select text-center text-h4 text-md-h2 text-md-start text-secondary"
-        >
+        <h1 class="font-italic mb-6 mb-md-10 no-user-select text-center text-h4 text-md-h2 text-md-start text-secondary">
           <strong class="font-weight-bold text-capitalize">{{ t('general.headline.frontendDeveloper') }}</strong>
         </h1>
 
