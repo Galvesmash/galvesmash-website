@@ -1,4 +1,16 @@
 export const general = {
+  ariaLabel: {
+    behance: 'Botão de Link do Behance',
+    github: 'Botão de Link do Github',
+    itchIo: 'Botão de Link do Itch.io',
+    koFi: 'Botão de Link do Ko-Fi',
+    languageSelector: 'Botão Seletor de Idioma',
+    linkedin: 'Botão de link do LinkedIn',
+    sideMenu: 'Botão do Menu Lateral',
+    themeSelector: 'Botão Seletor de Tema',
+    twitch: 'Botão de Link do Twitch',
+    youtube: 'Botão de Link do Youtube'
+  },
   headline: {
     frontendDeveloper: 'Desenvolvedor frontend',
     gameDeveloper: 'Desenvolvedor de jogos',

@@ -1,5 +1,16 @@
 export const general = {
-  copyrightText: 'Copyright © 2024 - Galvesmash - All right reserved\nMade by Gabriel Galves Taliatti\nDesigned by Studiotarmann',
+  ariaLabel: {
+    behance: 'Behance Link Button',
+    github: 'Github Link Button',
+    itchIo: 'Itch.io Link Button',
+    koFi: 'Ko-Fi Link Button',
+    languageSelector: 'Language Selector Button',
+    linkedin: 'LinkedIn Link Button',
+    sideMenu: 'Side Menu Button',
+    themeSelector: 'Theme Selector Button',
+    twitch: 'Twitch Link Button',
+    youtube: 'Youtube Link Button'
+  },
   headline: {
     frontendDeveloper: "Frontend developer",
     gameDeveloper: "Game developer",
