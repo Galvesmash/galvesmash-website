@@ -85,6 +85,7 @@
           <div class="align-center d-flex justify-center mx-auto">
             <v-app-bar-nav-icon
               v-if="isMobileView"
+              :aria-label="t('general.ariaLabel.sideMenu')"
               class="mr-5"
               height="24px"
               width="24px"

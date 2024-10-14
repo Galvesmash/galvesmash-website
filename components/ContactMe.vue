@@ -59,7 +59,7 @@
       >
         <h3 class="mb-6 font-italic font-weight-bold no-user-select text-h4 text-primary text-uppercase">{{ t('contact.title') }}</h3>
 
-        <p class="font-italic mb-6 mb-md-14 no-user-select text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
+        <p class="font-italic mb-6 mb-md-10 no-user-select text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
           {{ t('contact.text') }}
         </p>
 
@@ -68,7 +68,7 @@
             v-bind="props"
             :class="[ isHovering && !isMobileView ? 'text-primary' : 'text-secondary']"
             :style="{ transition: 'all .3s' }"
-            class="d-block font-italic opacity-100 pa-0 no-user-select text-headline-general text-none"
+            class="d-block font-italic opacity-100 px-0 py-1 no-user-select text-headline-general text-none"
             href="mailto:galvesmash.dev@gmail.com?subject=Hello%20from%20your%20website"
           >
             {{ t('contact.email.name') }}@{{ t('contact.email.provider') }}
@@ -81,13 +81,13 @@
             :class="[ isHovering && !isMobileView ? 'text-primary' : 'text-secondary']"
             :style="{ transition: 'all .3s' }"
             :href="`tel:${t('contact.phone').replace(/[^0-9+]/g, '')}`"
-            class="d-block font-italic mt-1 opacity-100 no-user-select pa-0 text-headline-general text-none"
+            class="d-block font-italic opacity-100 no-user-select px-0 py-1 text-headline-general text-none"
           >
             {{ t('contact.phone') }}
           </a>
         </v-hover>
 
-        <p class="font-italic mt-1 no-user-select text-headline-general text-secondary">
+        <p class="font-italic no-user-select pt-1 px-0 text-headline-general text-secondary">
           {{ t('contact.location') }}
         </p>
 

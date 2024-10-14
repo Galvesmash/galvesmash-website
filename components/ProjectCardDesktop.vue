@@ -1,7 +1,9 @@
 <script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
   import { useProjectStore } from '~/store'
   import type { ProjectObject } from '~/types'
 
+  const { t } = useI18n()
   const config = useRuntimeConfig()
 
   const emit = defineEmits(['handle-interaction'])
@@ -35,6 +37,7 @@
       target="_blank"
     >
       <v-img
+        :alt="t('general.projects.imageAlt')"
         :class="{ 'opacity-30 filter-blur-5 z-index-10' : isHovering }"
         :lazy-src="lazyImage"
         :src="coverImage"

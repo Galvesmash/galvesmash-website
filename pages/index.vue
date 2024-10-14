@@ -31,7 +31,7 @@
     ogTitle: t('general.seo.title'),
     description: t('general.seo.description'),
     ogDescription: t('general.seo.description'),
-    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me-small.png`
+    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me-small.webp`
   })
 
   const generalStore = useGeneralStore()
@@ -51,8 +51,8 @@
     router.push({ path: `/${route}` })
   }
 
-  const coverImage = computed(() => `${config.public.imagesPath}images/me-small.png`)
-  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me-small.png`)
+  const coverImage = computed(() => `${config.public.imagesPath}images/me-small.webp`)
+  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me-small.webp`)
   const mdCols = computed(() => {
     if (projectList.value.length >= 3) return '4'
 
@@ -63,31 +63,31 @@
     window.dataLayer = window?.dataLayer || []
 
     if (config.public.nodeEnv === 'production') {
-      window.dataLayer.push("js", new Date())
-      window.dataLayer.push("config", config.public.googleAnalyticsId)
+      window.dataLayer.push('js', new Date())
+      window.dataLayer.push('config', config.public.googleAnalyticsId)
     }
 
     projectStore.setProjectList([
       {
-        cover: 'cover-breathe.png',
+        cover: 'cover-breathe.webp',
         href: 'https://galvesmash.itch.io/breathe',
         subtitle: 'Unity3D',
         title: 'Breathe'
       },
       {
-        cover: 'cover-galvesmash-website.png',
+        cover: 'cover-galvesmash-website.webp',
         href: 'https://github.com/Galvesmash/galvesmash-website?tab=readme-ov-file#galvesmash-website',
         subtitle: 'Vue.js',
         title: 'Galvesmash Website'
       },
       {
-        cover: 'cover-fortune-machine.png',
+        cover: 'cover-fortune-machine.webp',
         href: 'https://github.com/Galvesmash/fortune-machine?tab=readme-ov-file#fortune-machine',
         subtitle: 'Vue.js',
         title: 'Fortune Machine'
       },
       {
-        cover: 'cover-fortune-teller.png',
+        cover: 'cover-fortune-teller.webp',
         href: 'https://github.com/Galvesmash/fortune-teller-game?tab=readme-ov-file#fortune-teller-game',
         subtitle: 'Vue.js',
         title: 'Fortune Teller'
@@ -101,39 +101,36 @@
     <v-row class="ma-0">
       <v-col class="d-flex justify-md-end pa-0 pr-md-16" cols="12" md="5">
         <v-img
-          :alt="t('general.imageAlt')"
+          :alt="t('general.presentation.imageAlt')"
           :lazy-src="lazyImage"
+          :max-height="isMobileView ? 160 : 224"
+          :max-width="isMobileView ? 160 : 224"
           :src="coverImage"
           :style="{ filter: 'contrast(0.8)' }"
           aspect-ratio="1"
           class="mx-auto mx-md-0"
+          format="webp"
           height="100%"
-          max-height="220px"
-          max-width="220px"
           rounded="circle"
           width="100%"
         />
       </v-col>
 
       <v-col class="mt-10 mt-md-0 pa-0" cols="12" md="7">
-        <h2
-          class="font-italic font-weight-thin mb-2 no-user-select text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary"
-        >
+        <h2 class="font-italic font-weight-thin mb-2 no-user-select text-capitalize text-center text-h5 text-md-h3 text-md-start text-secondary">
           {{ t('general.presentation.name') }}
         </h2>
         
-        <h2
-          class="font-italic mb-6 mb-md-10 no-user-select text-center text-h4 text-md-h2 text-md-start text-secondary"
-        >
+        <h1 class="font-italic mb-6 mb-md-10 no-user-select text-center text-h4 text-md-h2 text-md-start text-secondary">
           <strong class="font-weight-bold text-capitalize">{{ t('general.headline.frontendDeveloper') }}</strong>
-        </h2>
+        </h1>
 
-        <h1
+        <h2
           :style="{ whiteSpace: 'pre-line' }"
           class="text-center font-italic no-user-select text-body-1 text-md-h6 text-md-start text-secondary"
         >
           {{ t('general.presentation.title') }}
-        </h1>
+        </h2>
 
         <v-hover v-slot="{ isHovering, props }">
           <v-btn

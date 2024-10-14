@@ -1,8 +1,10 @@
 
 <script setup lang="ts">
-  import { useGeneralStore } from '~/store'
+  import { useI18n } from 'vue-i18n'
   import { storeToRefs } from 'pinia'
+  import { useGeneralStore } from '~/store'
 
+  const { t } = useI18n()
   const generalStore = useGeneralStore()
   const { isMobileView } = storeToRefs(generalStore)
 </script>
@@ -12,6 +14,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.linkedin')"
         :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
@@ -25,6 +28,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.github')"
         :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
@@ -38,6 +42,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.itchIo')"
         :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
@@ -51,6 +56,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.behance')"
         :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
@@ -64,6 +70,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.twitch')"
         :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
@@ -77,6 +84,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.youtube')"
         :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :style="{ transition: 'all .3s' }"
         density="compact"
@@ -90,6 +98,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.koFi')"
         density="compact"
         href="https://ko-fi.com/galvesmash"
         icon

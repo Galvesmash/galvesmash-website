@@ -1,11 +1,11 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n'
   import moment from 'moment';
+  import { useI18n } from 'vue-i18n'
   import { useGeneralStore, useLocaleStore } from '~/store'
 
+  const { t, locale } = useI18n()
   const generalStore = useGeneralStore()
   const localeStore = useLocaleStore()
-  const { t, locale } = useI18n()
   const { isMobileView } = storeToRefs(generalStore)
   const { availableLocales } = storeToRefs(localeStore)
 
@@ -26,6 +26,7 @@
         <v-hover v-slot="{ isHovering, props }">
           <v-btn
             v-bind="props"
+            :aria-label="t('general.ariaLabel.languageSelector')"
             :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
             :style="{ transition: 'all .3s' }"
             class="opacity-100"

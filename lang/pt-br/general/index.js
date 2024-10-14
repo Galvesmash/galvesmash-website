@@ -1,4 +1,16 @@
 export const general = {
+  ariaLabel: {
+    behance: 'Botão de Link do Behance',
+    github: 'Botão de Link do Github',
+    itchIo: 'Botão de Link do Itch.io',
+    koFi: 'Botão de Link do Ko-Fi',
+    languageSelector: 'Botão Seletor de Idioma',
+    linkedin: 'Botão de link do LinkedIn',
+    sideMenu: 'Botão do Menu Lateral',
+    themeSelector: 'Botão Seletor de Tema',
+    twitch: 'Botão de Link do Twitch',
+    youtube: 'Botão de Link do Youtube'
+  },
   headline: {
     frontendDeveloper: 'Desenvolvedor frontend',
     gameDeveloper: 'Desenvolvedor de jogos',
@@ -11,12 +23,10 @@ export const general = {
     madeBy: 'Feito por Gabriel Galves Taliatti\nDesenhado por',
     tarmann: 'Studiotarmann'
   },
-  imageAlt: 'Foto de Gabriel Galves Taliatti',
   language: {
     en: 'English',
     'pt-br': 'Português',
   },
-  learnMore: 'Saiba mais',
   menu: {
     about: 'Sobre',
     contact: 'Contato'
@@ -24,8 +34,13 @@ export const general = {
   present: 'Presente',
   presentation: {
     button: 'Confira mais sobre mim',
+    imageAlt: 'Foto de Gabriel Galves Taliatti',
     name: 'Gabriel Galves Taliatti',
     title: 'Mais de 8 anos desenvolvendo\nexperiências para web apps e sites.'
+  },
+  projects: {
+    imageAlt: 'Imagem do projeto',
+    learnMore: 'Saiba mais'
   },
   seo: {
     title: 'Galvesmash: Desenvolvedor frontend',

@@ -1,5 +1,16 @@
 export const general = {
-  copyrightText: 'Copyright © 2024 - Galvesmash - All right reserved\nMade by Gabriel Galves Taliatti\nDesigned by Studiotarmann',
+  ariaLabel: {
+    behance: 'Behance Link Button',
+    github: 'Github Link Button',
+    itchIo: 'Itch.io Link Button',
+    koFi: 'Ko-Fi Link Button',
+    languageSelector: 'Language Selector Button',
+    linkedin: 'LinkedIn Link Button',
+    sideMenu: 'Side Menu Button',
+    themeSelector: 'Theme Selector Button',
+    twitch: 'Twitch Link Button',
+    youtube: 'Youtube Link Button'
+  },
   headline: {
     frontendDeveloper: "Frontend developer",
     gameDeveloper: "Game developer",
@@ -12,12 +23,10 @@ export const general = {
     madeBy: 'Made by Gabriel Galves Taliatti\nDesigned by',
     tarmann: 'Studiotarmann'
   },
-  imageAlt: 'Gabriel Galves Taliatti’s picture',
   language: {
     en: 'English',
     'pt-br': 'Português',
   },
-  learnMore: 'Learn more',
   menu: {
     about: 'About',
     contact: 'Contact'
@@ -25,8 +34,13 @@ export const general = {
   present: 'Present',
   presentation: {
     button: 'Check more about me',
+    imageAlt: 'Gabriel Galves Taliatti’s picture',
     name: 'Gabriel Galves Taliatti',
     title: 'Over 8 years developing experiences\nfor web apps and sites.'
+  },
+  projects: {
+    imageAlt: 'Project image',
+    learnMore: 'Learn more',
   },
   seo: {
     title: 'Galvesmash: Frontend developer',

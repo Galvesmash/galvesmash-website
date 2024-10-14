@@ -1,7 +1,9 @@
 <script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
   import { useTheme } from 'vuetify'
   import { useGeneralStore, useThemeStore } from '~/store'
 
+  const { t } = useI18n()
   const theme = useTheme()
   const generalStore = useGeneralStore()
   const themeStore = useThemeStore()
@@ -26,6 +28,7 @@
     <v-hover v-slot="{ isHovering, props }">
       <v-btn
         v-bind="props"
+        :aria-label="t('general.ariaLabel.themeSelector')"
         :color="isHovering && !isMobileView ? 'primary' : 'secondary'"
         :icon="`fa-solid fa-${currentTheme === availableThemes[0] ? 'moon' : 'sun'}`"
         :style="{ transition: 'all .3s' }"

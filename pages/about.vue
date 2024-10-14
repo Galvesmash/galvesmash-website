@@ -28,13 +28,13 @@
     ogTitle: t('about.seo.title'),
     description: t('about.seo.description'),
     ogDescription: t('about.seo.description'),
-    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me.png`
+    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me.webp`
   })
 
   const themeStore = useThemeStore()
 
-  const coverImage = computed(() => `${config.public.imagesPath}images/me.png`)
-  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me.png`)
+  const coverImage = computed(() => `${config.public.imagesPath}images/me.webp`)
+  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me.webp`)
 
   themeStore.setCurrentLayout('default')
 
@@ -42,8 +42,8 @@
     window.dataLayer = window?.dataLayer || []
 
     if (config.public.nodeEnv === 'production') {
-      window.dataLayer.push("js", new Date())
-      window.dataLayer.push("config", config.public.googleAnalyticsId)
+      window.dataLayer.push('js', new Date())
+      window.dataLayer.push('config', config.public.googleAnalyticsId)
     }
   })
 </script>
@@ -68,19 +68,19 @@
       </v-col>
 
       <v-col class="mb-2 mb-md-6 pa-0 pl-md-12" sm="12" md="8" cols="12">
-        <h2 class="mb-6 font-italic font-weight-bold no-user-select text-h4 text-primary text-uppercase">{{ t('about.aboutMe.title') }}!</h2>
+        <h1 class="mb-6 font-italic font-weight-bold no-user-select text-h4 text-primary text-uppercase">{{ t('about.aboutMe.title') }}!</h1>
 
         <about-me />
       </v-col>
 
       <v-col class="mt-10 mt-md-16 pa-0" cols="12">
-        <h3 class="mb-6 font-italic font-weight-bold no-user-select text-md-center text-h4 text-primary text-uppercase">{{ t('about.skills.title') }}</h3>
+        <h2 class="mb-6 font-italic font-weight-bold no-user-select text-md-center text-h4 text-primary text-uppercase">{{ t('about.skills.title') }}</h2>
 
         <skill-list />
       </v-col>
 
       <v-col class="mb-2 mb-md-6 mt-10 mt-md-16 pa-0" cols="12">
-        <h3 class="mb-6 font-italic font-weight-bold no-user-select text-md-center text-h4 text-primary text-uppercase">{{ t('about.experience.title') }}</h3>
+        <h2 class="mb-6 font-italic font-weight-bold no-user-select text-md-center text-h4 text-primary text-uppercase">{{ t('about.experience.title') }}</h2>
 
         <experience-list />
       </v-col>
