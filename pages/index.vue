@@ -31,7 +31,7 @@
     ogTitle: t('general.seo.title'),
     description: t('general.seo.description'),
     ogDescription: t('general.seo.description'),
-    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me-small.png`
+    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me-small.webp`
   })
 
   const generalStore = useGeneralStore()
@@ -51,8 +51,8 @@
     router.push({ path: `/${route}` })
   }
 
-  const coverImage = computed(() => `${config.public.imagesPath}images/me-small.png`)
-  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me-small.png`)
+  const coverImage = computed(() => `${config.public.imagesPath}images/me-small.webp`)
+  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me-small.webp`)
   const mdCols = computed(() => {
     if (projectList.value.length >= 3) return '4'
 
@@ -69,25 +69,25 @@
 
     projectStore.setProjectList([
       {
-        cover: 'cover-breathe.png',
+        cover: 'cover-breathe.webp',
         href: 'https://galvesmash.itch.io/breathe',
         subtitle: 'Unity3D',
         title: 'Breathe'
       },
       {
-        cover: 'cover-galvesmash-website.png',
+        cover: 'cover-galvesmash-website.webp',
         href: 'https://github.com/Galvesmash/galvesmash-website?tab=readme-ov-file#galvesmash-website',
         subtitle: 'Vue.js',
         title: 'Galvesmash Website'
       },
       {
-        cover: 'cover-fortune-machine.png',
+        cover: 'cover-fortune-machine.webp',
         href: 'https://github.com/Galvesmash/fortune-machine?tab=readme-ov-file#fortune-machine',
         subtitle: 'Vue.js',
         title: 'Fortune Machine'
       },
       {
-        cover: 'cover-fortune-teller.png',
+        cover: 'cover-fortune-teller.webp',
         href: 'https://github.com/Galvesmash/fortune-teller-game?tab=readme-ov-file#fortune-teller-game',
         subtitle: 'Vue.js',
         title: 'Fortune Teller'
@@ -107,6 +107,7 @@
           :style="{ filter: 'contrast(0.8)' }"
           aspect-ratio="1"
           class="mx-auto mx-md-0"
+          format="webp"
           height="100%"
           max-height="220px"
           max-width="220px"

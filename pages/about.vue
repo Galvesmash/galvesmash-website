@@ -28,13 +28,13 @@
     ogTitle: t('about.seo.title'),
     description: t('about.seo.description'),
     ogDescription: t('about.seo.description'),
-    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me.png`
+    ogImage: `https://galvesmash.com${config.public.imagesPath}images/me.webp`
   })
 
   const themeStore = useThemeStore()
 
-  const coverImage = computed(() => `${config.public.imagesPath}images/me.png`)
-  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me.png`)
+  const coverImage = computed(() => `${config.public.imagesPath}images/me.webp`)
+  const lazyImage = computed(() => `${config.public.imagesPath}images/lazy-me.webp`)
 
   themeStore.setCurrentLayout('default')
 
