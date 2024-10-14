@@ -1,6 +1,6 @@
 # galvesmash-website
 
-## [Click here to check Galvesmash Website running!](https://galvesmash.github.io/galvesmash-website/#/)
+## [Click here to check Galvesmash Website running!](https://galvesmash.com/)
 
 ## About
 Galvesmash Website is made with love.
@@ -14,7 +14,7 @@ Created by Gabriel Galves Taliatti.
 
 ## GitHub Page
 - [Repository](https://github.com/Galvesmash/galvesmash-website)
-- [Web](https://galvesmash.github.io/galvesmash-website/#/)
+- [Web](https://galvesmash.com/)
 
 ## Project setup
 ```
