@@ -103,14 +103,14 @@
         <v-img
           :alt="t('general.presentation.imageAlt')"
           :lazy-src="lazyImage"
+          :max-height="isMobileView ? 160 : 224"
+          :max-width="isMobileView ? 160 : 224"
           :src="coverImage"
           :style="{ filter: 'contrast(0.8)' }"
           aspect-ratio="1"
           class="mx-auto mx-md-0"
           format="webp"
           height="100%"
-          max-height="220px"
-          max-width="220px"
           rounded="circle"
           width="100%"
         />
