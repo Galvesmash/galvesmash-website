@@ -122,18 +122,18 @@
           {{ t('general.presentation.name') }}
         </h2>
         
-        <h2
+        <h1
           class="font-italic mb-6 mb-md-10 no-user-select text-center text-h4 text-md-h2 text-md-start text-secondary"
         >
           <strong class="font-weight-bold text-capitalize">{{ t('general.headline.frontendDeveloper') }}</strong>
-        </h2>
+        </h1>
 
-        <h1
+        <h2
           :style="{ whiteSpace: 'pre-line' }"
           class="text-center font-italic no-user-select text-body-1 text-md-h6 text-md-start text-secondary"
         >
           {{ t('general.presentation.title') }}
-        </h1>
+        </h2>
 
         <v-hover v-slot="{ isHovering, props }">
           <v-btn
