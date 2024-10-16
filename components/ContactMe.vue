@@ -59,7 +59,7 @@
       >
         <h3 class="mb-6 font-italic font-weight-bold no-user-select text-h4 text-primary text-uppercase">{{ t('contact.title') }}</h3>
 
-        <p class="font-italic mb-6 mb-md-10 no-user-select text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
+        <p class="font-italic mb-6 mb-md-15 no-user-select text-headline-general text-secondary" :style="{ whiteSpace: 'break-spaces' }">
           {{ t('contact.text') }}
         </p>
 
@@ -72,18 +72,6 @@
             href="mailto:galvesmash.dev@gmail.com?subject=Hello%20from%20your%20website"
           >
             {{ config.public.email }}
-          </a>
-        </v-hover>
-
-        <v-hover v-slot="{ isHovering, props }">
-          <a
-            v-bind="props"
-            :class="[ isHovering && !isMobileView ? 'text-primary' : 'text-secondary']"
-            :style="{ transition: 'all .3s' }"
-            :href="`tel:${t('contact.ddi')}${config.public.phone.replace(/[^0-9+]/g, '')}`"
-            class="d-block font-italic opacity-100 no-user-select px-0 py-1 text-headline-general text-none"
-          >
-            {{ t('contact.ddi') }} {{ config.public.phone }}
           </a>
         </v-hover>
 
