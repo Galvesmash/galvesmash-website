@@ -1,10 +1,17 @@
+<script setup lang="ts">
+  import { defineAsyncComponent } from 'vue'
+
+  const AppHeader = defineAsyncComponent(() => import('~/components/AppHeader'))
+  const AppFooter = defineAsyncComponent(() => import('~/components/AppFooter'))
+</script>
+
 <template>
   <div>
-    <app-header />
+    <AppHeader />
     
     <slot />
 
-    <app-footer />
+    <AppFooter />
   </div>
 </template>
 

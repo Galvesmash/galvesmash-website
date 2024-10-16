@@ -1,8 +1,11 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
-  import ProjectCard from '~/components/ProjectCard'
-  import ProjectCardDesktop from '~/components/ProjectCardDesktop'
+  import { defineAsyncComponent } from 'vue'
   import { useGeneralStore, useProjectStore, useThemeStore } from '~/store'
+
+  const ProjectCard = defineAsyncComponent(() => import('~/components/ProjectCard'))
+  const ProjectCardDesktop = defineAsyncComponent(() => import('~/components/ProjectCardDesktop'))
+  const ContactMe = defineAsyncComponent(() => import('~/components/ContactMe'))
 
   definePageMeta({
     layout: 'default',
@@ -182,7 +185,7 @@
 
     <v-row class="ma-0 pt-10 pt-md-16">
       <v-col class="pa-0" cols="12">
-        <contact-me />
+        <ContactMe />
       </v-col>
     </v-row>
   </section>

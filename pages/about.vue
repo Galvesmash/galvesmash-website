@@ -1,6 +1,12 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
+  import { defineAsyncComponent } from 'vue'
   import { useThemeStore } from '~/store'
+
+  const AboutMe = defineAsyncComponent(() => import('~/components/ContactMe'))
+  const ContactMe = defineAsyncComponent(() => import('~/components/ContactMe'))
+  const ExperienceList = defineAsyncComponent(() => import('~/components/ExperienceList'))
+  const SkillList = defineAsyncComponent(() => import('~/components/SkillList'))
 
   definePageMeta({
     layout: 'default',
@@ -70,23 +76,23 @@
       <v-col class="mb-2 mb-md-6 pa-0 pl-md-12" sm="12" md="8" cols="12">
         <h1 class="mb-6 font-italic font-weight-bold no-user-select text-h4 text-primary text-uppercase">{{ t('about.aboutMe.title') }}!</h1>
 
-        <about-me />
+        <AboutMe />
       </v-col>
 
       <v-col class="mt-10 mt-md-16 pa-0" cols="12">
         <h2 class="mb-6 font-italic font-weight-bold no-user-select text-md-center text-h4 text-primary text-uppercase">{{ t('about.skills.title') }}</h2>
 
-        <skill-list />
+        <SkillList />
       </v-col>
 
       <v-col class="mb-2 mb-md-6 mt-10 mt-md-16 pa-0" cols="12">
         <h2 class="mb-6 font-italic font-weight-bold no-user-select text-md-center text-h4 text-primary text-uppercase">{{ t('about.experience.title') }}</h2>
 
-        <experience-list />
+        <ExperienceList />
       </v-col>
 
       <v-col class="mt-10 mt-md-16 pa-0" cols="12">
-        <contact-me />
+        <ContactMe />
       </v-col>
     </v-row>
   </section>
