@@ -25,11 +25,13 @@ jobs:
           VUE_APP_CV_LINK: ${{ secrets.VUE_APP_CV_LINK }}
           VUE_APP_DEFAULT_LOCALE: ${{ secrets.VUE_APP_DEFAULT_LOCALE }}
           VUE_APP_DOMAIN: ${{ secrets.VUE_APP_DOMAIN }}
+          VUE_APP_EMAIL: ${{ secrets.VUE_APP_EMAIL }}
           VUE_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.VUE_APP_EMAILJS_PUBLIC_KEY }}
           VUE_APP_EMAILJS_SERVICE: ${{ secrets.VUE_APP_EMAILJS_SERVICE }}
           VUE_APP_EMAILJS_TEMPLATE: ${{ secrets.VUE_APP_EMAILJS_TEMPLATE }}
           VUE_APP_GA_ID: ${{ secrets.VUE_APP_GA_ID }}
           VUE_APP_GTM_ID: ${{ secrets.VUE_APP_GTM_ID }}
+          VUE_APP_PHONE: ${{ secrets.VUE_APP_PHONE }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

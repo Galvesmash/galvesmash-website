@@ -51,6 +51,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       cvLink: process.env.VUE_APP_CV_LINK,
+      email: process.env.VUE_APP_EMAIL,
       emailjs: {
         publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
         serviceKey: process.env.VUE_APP_EMAILJS_SERVICE,
@@ -59,6 +60,7 @@ export default defineNuxtConfig({
       googleAnalyticsId: process.env.VUE_APP_GA_ID,
       imagesPath: process.env.NODE_ENV === "production" && !process.env.VUE_APP_DOMAIN ? "/galvesmash-website/" : "/",
       nodeEnv: process.env.NODE_ENV,
+      phone: process.env.VUE_APP_PHONE,
       version: process.env.VUE_APP_VERSION,
     }
   },
