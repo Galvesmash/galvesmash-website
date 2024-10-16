@@ -69,7 +69,6 @@ export default defineNuxtConfig({
       googleAnalyticsId: process.env.VUE_APP_GA_ID,
       imagesPath: process.env.NODE_ENV === "production" && !process.env.VUE_APP_DOMAIN ? "/galvesmash-website/" : "/",
       nodeEnv: process.env.NODE_ENV,
-      phone: process.env.VUE_APP_PHONE,
       version: process.env.VUE_APP_VERSION,
     }
   },
