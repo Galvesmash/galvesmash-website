@@ -12,6 +12,7 @@ node_modules
 # Logs
 logs
 *.log
+.unlighthouse
 
 # Misc
 .DS_Store

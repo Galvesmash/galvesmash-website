@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   },
 
   gtm: {
-    enabled: process.env.NODE_ENV === 'production',
+    enabled: false,
     id: process.env.VUE_APP_GTM_ID || ''
   },
 
