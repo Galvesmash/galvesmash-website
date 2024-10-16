@@ -16,17 +16,13 @@
   const { t, locale } = useI18n()
   const config = useRuntimeConfig()
 
-  const gaObject = config.public.nodeEnv === 'production'
-    ? {
-        src: `https://www.googletagmanager.com/gtag/js?id=${config.public.googleAnalyticsId}`,
-        async: true,
-      }
-    : {}
-
   useHead({
     htmlAttrs: { lang: `${locale.value}` },
     link: [{ rel: 'canonical', href: 'https://galvesmash.com/about' }],
-    script: [ gaObject ]
+    script: [{
+      src: `https://www.googletagmanager.com/gtag/js?id=${config.public.googleAnalyticsId}`,
+      async: true,
+    }]
   })
 
   useSeoMeta({

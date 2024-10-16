@@ -35,8 +35,13 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@pinia/nuxt',
     '@zadigetvoltaire/nuxt-gtm',
+    'nuxt-delay-hydration',
     'nuxt-gtag',
   ],
+
+  delayHydration: {
+    debug: process.env.NODE_ENV === 'development'
+  },
 
   gtag: {
     enabled: process.env.NODE_ENV === 'production',
@@ -46,6 +51,10 @@ export default defineNuxtConfig({
   gtm: {
     enabled: process.env.NODE_ENV === 'production',
     id: process.env.VUE_APP_GTM_ID || ''
+  },
+
+  routeRules: {
+    '/': { delayHydration: 'mount' }
   },
 
   runtimeConfig: {

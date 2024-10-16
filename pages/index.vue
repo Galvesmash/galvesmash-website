@@ -16,17 +16,13 @@
   const config = useRuntimeConfig()
   const router = useRouter()
 
-  const gaObject = config.public.nodeEnv === 'production'
-    ? {
-        src: `https://www.googletagmanager.com/gtag/js?id=${config.public.googleAnalyticsId}`,
-        async: true,
-      }
-    : {}
-
   useHead({
     htmlAttrs: { lang: `${locale.value}` },
     link: [{ rel: 'canonical', href: 'https://galvesmash.com' }],
-    script: [ gaObject ]
+    script: [{
+      src: `https://www.googletagmanager.com/gtag/js?id=${config.public.googleAnalyticsId}`,
+      async: true,
+    }]
   })
 
   useSeoMeta({
