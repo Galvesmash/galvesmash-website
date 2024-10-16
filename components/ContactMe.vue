@@ -71,7 +71,7 @@
             class="d-block font-italic opacity-100 px-0 py-1 no-user-select text-headline-general text-none"
             href="mailto:galvesmash.dev@gmail.com?subject=Hello%20from%20your%20website"
           >
-            {{ t('contact.email.name') }}@{{ t('contact.email.provider') }}
+            {{ config.public.email }}
           </a>
         </v-hover>
 
@@ -80,10 +80,10 @@
             v-bind="props"
             :class="[ isHovering && !isMobileView ? 'text-primary' : 'text-secondary']"
             :style="{ transition: 'all .3s' }"
-            :href="`tel:${t('contact.phone').replace(/[^0-9+]/g, '')}`"
+            :href="`tel:${t('contact.ddi')}${config.public.phone.replace(/[^0-9+]/g, '')}`"
             class="d-block font-italic opacity-100 no-user-select px-0 py-1 text-headline-general text-none"
           >
-            {{ t('contact.phone') }}
+            {{ t('contact.ddi') }} {{ config.public.phone }}
           </a>
         </v-hover>
 

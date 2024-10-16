@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { useTheme } from 'vuetify'
+  import { defineAsyncComponent } from 'vue'
   import { useGeneralStore, useThemeStore } from '~/store'
   import { storeToRefs } from 'pinia'
 
@@ -8,6 +9,8 @@
       dataLayer: any
     }
   }
+
+  const SideMenu = defineAsyncComponent(() => import('~/components/SideMenu'))
 
   const theme = useTheme()
   const generalStore = useGeneralStore()
@@ -43,7 +46,7 @@
       :class="[ { 'pt-md-app': !isMobileView }, `pt-16 v-layout--${currentLayout}`]"
       :theme="currentTheme"
     >
-      <side-menu />
+      <SideMenu />
 
       <v-container class="px-5 px-md-16 py-0" max-width="1440">
         <nuxt-page />

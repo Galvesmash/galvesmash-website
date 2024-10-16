@@ -16,7 +16,7 @@ export const contact = {
     required: 'Required.',
   },
   location: 'Sao Paulo, Brazil',
-  phone: '+55 11 96639-9361',
+  ddi: '+55',
   text: 'Interested in working with me, hiring\nmy services, or simply connecting?\n\nFeel free to send me a message,\nI’d love to hear from you!',
   title: 'Contact me',
 }

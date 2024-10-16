@@ -1,6 +1,6 @@
 {
   "name": "galvesmash-website",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "private": true,
   "description": "Galvesmash website",
   "author": "Galvesmash",
@@ -39,6 +39,7 @@
     "@mdi/font": "^7.4.47",
     "@nuxtjs/i18n": "^8.0.0",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
+    "nuxt-delay-hydration": "^1.3.8",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.5.9"
   }
