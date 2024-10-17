@@ -3,7 +3,7 @@
   import { defineAsyncComponent } from 'vue'
   import { useThemeStore } from '~/store'
 
-  const AboutMe = defineAsyncComponent(() => import('~/components/ContactMe'))
+  const AboutMe = defineAsyncComponent(() => import('~/components/AboutMe'))
   const ContactMe = defineAsyncComponent(() => import('~/components/ContactMe'))
   const ExperienceList = defineAsyncComponent(() => import('~/components/ExperienceList'))
   const SkillList = defineAsyncComponent(() => import('~/components/SkillList'))

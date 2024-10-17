@@ -145,9 +145,7 @@
               name="message"
               variant="outlined"
             />
-          </v-container>
 
-          <v-container class="ma-0 pa-0" max-width="650">
             <v-btn
               :loading="loading"
               class="font-italic font-weight-bold"
