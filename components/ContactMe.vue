@@ -2,13 +2,16 @@
 <script setup lang="ts">
   import emailjs from 'emailjs-com'
   import { useI18n } from 'vue-i18n'
+  import { defineAsyncComponent } from 'vue'
   import { useGeneralStore } from '~/store'
+  const DialogModal = defineAsyncComponent(() => import('./DialogModal'))
 
   const { t } = useI18n()
   const config = useRuntimeConfig()
   const generalStore = useGeneralStore()
   const { isMobileView } = storeToRefs(generalStore)
 
+  const dialog = ref(false)
   const email = ref('')
   const loading = ref(false)
   const message = ref('')
@@ -36,11 +39,24 @@
         config.public.emailjs.templateKey,
         formPayload
       )
+      
+      dialog.value = true
     } catch(error) {
       console.error({error})
     }
 
     loading.value = false
+  }
+
+  const resetForm = () => {
+    email.value = ''
+    message.value = ''
+    name.value = ''
+  }
+
+  const closeDialog = () => {
+    resetForm()
+    dialog.value = false
   }
 
   onMounted(() => {
@@ -67,9 +83,9 @@
           <a
             v-bind="props"
             :class="[ isHovering && !isMobileView ? 'text-primary' : 'text-secondary']"
+            :href="`mailto:${config.public.email}?subject=Hello%20from%20your%20website`"
             :style="{ transition: 'all .3s' }"
             class="d-block font-italic opacity-100 px-0 py-1 no-user-select text-headline-general text-none"
-            href="mailto:galvesmash.dev@gmail.com?subject=Hello%20from%20your%20website"
           >
             {{ config.public.email }}
           </a>
@@ -157,6 +173,11 @@
             </v-btn>
           </v-container>
         </v-form>
+
+        <DialogModal
+          :dialog="dialog"
+          @handle-close="closeDialog"
+        />
       </v-col>
     </v-row>
   </section>

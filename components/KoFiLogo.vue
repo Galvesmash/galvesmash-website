@@ -1,15 +1,10 @@
 <script setup lang="ts">
   import { useTheme } from 'vuetify'
+  import type { LogoObject } from '~/types'
 
   const theme = useTheme()
 
-  interface Props {
-    color?: string
-    height?: string
-    width?: string
-  }
-
-  const props = withDefaults(defineProps<Props>(), {
+  const props = withDefaults(defineProps<LogoObject>(), {
     color: 'rgb(var(--v-theme-secondary))',
     height: '24',
     width: '24'
