@@ -1,3 +1,5 @@
+import { NullValue } from "rollup"
+
 export interface ExperienceObject {
   company: string
   end: string
@@ -20,6 +22,22 @@ export interface LocaleStore {
   availableLocales: string[]
   currentLocale: string
   defaultLocale: string
+}
+
+export interface LogoObject {
+  color?: string
+  height?: string
+  width?: string
+}
+
+export interface ModalTemplate {
+  backgroundColor?: string
+  color?: string
+  dialog: boolean
+  maxWidth?: number
+  prependIcon?: string | null
+  text: string
+  title: string
 }
 
 export interface ProjectObject {
