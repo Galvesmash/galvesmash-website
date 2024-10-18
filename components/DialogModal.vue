@@ -1,7 +1,9 @@
 <script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
   import { useGeneralStore } from '~/store'
   import type { ModalTemplate } from '~/types'
 
+  const { t } = useI18n()
   const generalStore = useGeneralStore()
   const { isMobileView } = storeToRefs(generalStore)
   const emit = defineEmits(['handle-close'])
@@ -10,10 +12,7 @@
     backgroundColor: 'background',
     color: 'secondary',
     dialog: false,
-    maxWidth: 540,
-    prependIcon: null,
-    text: 'Em breve entrarei em contato!',
-    title: 'Obrigado pela mensagem'
+    maxWidth: 540
   })
 </script>
 

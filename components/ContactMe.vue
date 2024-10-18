@@ -176,6 +176,8 @@
 
         <DialogModal
           :dialog="dialog"
+          :text="t('contact.dialog.text')"
+          :title="t('contact.dialog.title')"
           @handle-close="closeDialog"
         />
       </v-col>

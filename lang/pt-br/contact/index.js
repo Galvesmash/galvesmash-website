@@ -1,5 +1,9 @@
 export const contact = {
-  checkMyCv: 'Confira meu CV', 
+  checkMyCv: 'Confira meu CV',
+  dialog: {
+    text: 'Em breve entrarei em contato!',
+    title: 'Obrigado pela mensagem'
+  },
   form: {
     email: 'Email',
     message: 'Mensagem',

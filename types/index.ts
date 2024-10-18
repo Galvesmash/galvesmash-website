@@ -36,8 +36,8 @@ export interface ModalTemplate {
   dialog: boolean
   maxWidth?: number
   prependIcon?: string | null
-  text?: string
-  title?: string
+  text: string
+  title: string
 }
 
 export interface ProjectObject {
