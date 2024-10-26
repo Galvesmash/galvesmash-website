@@ -1,7 +1,6 @@
 # Galvesmash Website
 
-[![Version](https://img.shields.io/github/v/release/Galvesmash/galvesmash-website?style=for-the-badge&display_name=tag)](https://github.com/Galvesmash/galvesmash-website/releases)
-[![Version](https://img.shields.io/badge/version-0.5.0-blue?style=for-the-badge)](https://github.com/Galvesmash/galvesmash-website/releases)
+[![Version](https://img.shields.io/github/v/release/Galvesmash/galvesmash-website?style=for-the-badge&display_name=tag&label=Version)](https://github.com/Galvesmash/galvesmash-website/releases)
 
 [![Deployment Status](https://github.com/Galvesmash/galvesmash-website/actions/workflows/deploy.yml/badge.svg?style=for-the-badge)](https://github.com/Galvesmash/galvesmash-website/actions/workflows/deploy.yml)
 
