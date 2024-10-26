@@ -1,5 +1,4 @@
 # Galvesmash Website
-
 [![Version](https://img.shields.io/github/v/release/Galvesmash/galvesmash-website?style=for-the-badge&display_name=tag&label=Version)](https://github.com/Galvesmash/galvesmash-website/releases)
 
 [![Deployment Status](https://github.com/Galvesmash/galvesmash-website/actions/workflows/deploy.yml/badge.svg?style=for-the-badge)](https://github.com/Galvesmash/galvesmash-website/actions/workflows/deploy.yml)
@@ -9,8 +8,10 @@
 [![Vuetify 3](https://img.shields.io/badge/vuetify-3.5.9-brightblue)](https://vuetifyjs.com/)
 [![License](https://img.shields.io/github/license/Galvesmash/galvesmash-website)](./LICENSE)
 
-This is my personal website project, showcasing my portfolio and skills.
-Created by Gabriel Galves Taliatti.
+<p>
+   This is my personal website project, showcasing my portfolio and skills.<br />
+   Created by Gabriel Galves Taliatti.
+</p>
 
 ## 🎨 Technologies Used
 - **Vue 3** & **Nuxt 3**: For SSR and SPA features
@@ -49,9 +50,11 @@ Created by Gabriel Galves Taliatti.
 3. Submit a PR!
 
 ## 🔄 Use This Project
-Feel free to use this project and its code as a basis for creating your own personal website!
-If you do, I’d love to hear about it, feel free to send me a message or leave a note in your project.
-It’s always great to see how others build on this work!
+<p>
+   Feel free to use this project and its code as a basis for creating your own personal website!<br />
+   If you do, I’d love to hear about it, feel free to send me a message or leave a note in your project.<br />
+   It’s always great to see how others build on this work!
+</p>
 
 ## 📜 License
 Distributed under the MIT License. See [LICENSE](./LICENSE) for details.
