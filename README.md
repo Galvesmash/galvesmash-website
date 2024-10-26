@@ -1,7 +1,7 @@
 # Galvesmash Website
 
 [![Version](https://img.shields.io/badge/version-0.5.0-blue)](https://github.com/Galvesmash/galvesmash-website/releases)
-[![Deployment Status](https://img.shields.io/github/deploy-status/Galvesmash/galvesmash-website/deployments)](https://galvesmash.com)
+[![Deployment Status](https://github.com/Galvesmash/galvesmash-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/Galvesmash/galvesmash-website/actions/workflows/deploy.yml)
 [![Vue](https://img.shields.io/badge/vue-3.4.21-green)](https://vuejs.org/)
 [![Nuxt 3](https://img.shields.io/badge/nuxt-3.10.3-brightgreen)](https://nuxtjs.org/)
 [![Vuetify 3](https://img.shields.io/badge/vuetify-3.5.9-brightblue)](https://vuetifyjs.com/)
