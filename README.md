@@ -14,10 +14,10 @@
 </p>
 
 ## 🎨 Technologies Used
-- **Vue 3** & **Nuxt 3**: For SSR and SPA features
-- **TypeScript**: Ensuring robust, maintainable code
-- **Vuetify 3**: For responsive and consistent UI
-- **GitHub Pages**: Automated deployment
+- **Vue 3**
+- **Nuxt 3**
+- **TypeScript**
+- **Vuetify 3**
 
 ## 🚀 Features
 - Responsive design
@@ -39,7 +39,7 @@
    ```
 
 ## 📋 TODO List
-- [ ] Add unit tests for main components (using Vitest or Jest)
+- [ ] Add unit tests for main components (Vitest or Jest)
 - [ ] Expand documentation with Storybook
 - [ ] Improve SEO tags, metadata and accessibility
 - [ ] Implement additional language support in i18n

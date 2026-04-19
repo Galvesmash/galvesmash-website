@@ -79,10 +79,6 @@ export default defineNuxtConfig({
         overlay: false,
       },
     },
-    // @ts-ignore
-    ssr: {
-      noExternal: ["moment"]
-    },
     vue: {
       template: {
         transformAssetUrls,

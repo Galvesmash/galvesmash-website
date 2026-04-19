@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import moment from 'moment';
   import { useI18n } from 'vue-i18n'
   import { useGeneralStore, useLocaleStore } from '~/store'
 
@@ -15,7 +14,6 @@
     setCurrentLocale(lang)
 
     locale.value = lang
-    moment.locale(lang)
   }
 </script>
 
