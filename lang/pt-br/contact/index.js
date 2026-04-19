@@ -1,4 +1,4 @@
-export const contact = {
+export default {
   checkMyCv: 'Confira meu CV',
   dialog: {
     text: 'Em breve entrarei em contato!',

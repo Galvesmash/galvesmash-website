@@ -1,7 +1,6 @@
 
 <script setup lang="ts">
-  import emailjs from 'emailjs-com'
-  import { useI18n } from 'vue-i18n'
+  import emailjs from '@emailjs/browser'
   import { defineAsyncComponent } from 'vue'
   import { useGeneralStore } from '~/store'
   const DialogModal = defineAsyncComponent(() => import('./DialogModal'))

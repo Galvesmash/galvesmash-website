@@ -1,7 +1,7 @@
-import lang from '../lang/lang.js'
+import lang from '~/lang/index.js'
 
 export default defineI18nConfig(() => ({
-  locale: process.env.VUE_APP_DEFAULT_LOCALE,
+  locale: 'en',
   legacy: false,
   messages: lang
 }))

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n'
   import { defineAsyncComponent } from 'vue'
   import { useThemeStore } from '~/store'
 

@@ -1,4 +1,4 @@
-export const general = {
+export default {
   ariaLabel: {
     behance: 'Behance Link Button',
     github: 'Github Link Button',

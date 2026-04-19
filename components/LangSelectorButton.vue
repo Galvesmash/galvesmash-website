@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n'
   import { useGeneralStore, useLocaleStore } from '~/store'
 
   const { t, locale } = useI18n()
