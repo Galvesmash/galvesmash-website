@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n'
   import { useTheme } from 'vuetify'
   import { useGeneralStore, useThemeStore } from '~/store'
 
@@ -12,7 +11,7 @@
 
   const setCurrentTheme = themeStore.setCurrentTheme
 
-  theme.global.name.value = currentTheme.value
+  theme.change(currentTheme.value)
 
   const toggleTheme = () => {
     theme.global.name.value = (theme.global.current.value.dark)

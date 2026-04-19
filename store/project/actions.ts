@@ -1,5 +1,3 @@
-// import axios from 'axios'
-// import consts from '@/static/ts/consts'
 import { useProjectStore } from '~/store'
 
 import type { ProjectObject } from '~/types'

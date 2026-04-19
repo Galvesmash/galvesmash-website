@@ -1,4 +1,4 @@
-export const general = {
+export default {
   ariaLabel: {
     behance: 'Behance Link Button',
     github: 'Github Link Button',
@@ -36,7 +36,7 @@ export const general = {
     button: 'Check more about me',
     imageAlt: 'Gabriel Galves Taliatti’s picture',
     name: 'Gabriel Galves Taliatti',
-    title: 'Over 8 years developing experiences\nfor web apps and sites.'
+    title: 'Over 10 years developing experiences\nfor web apps and sites.'
   },
   projects: {
     imageAlt: 'Project image',
@@ -44,7 +44,7 @@ export const general = {
   },
   seo: {
     title: 'Galvesmash: Frontend developer',
-    description: 'Over 8 years developing experiences for web apps and sites.'
+    description: 'Over 10 years developing experiences for web apps and sites.'
   },
   someProjectsWorked: 'Some projects I’ve worked on',
   soon: 'Soon'

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n'
   import { useProjectStore } from '~/store'
   import type { ProjectObject } from '~/types'
 

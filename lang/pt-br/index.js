@@ -1,8 +1,8 @@
-import { about } from './about'
-import { contact } from './contact'
-import { general } from './general'
+import about from './about/index.js'
+import contact from './contact/index.js'
+import general from './general/index.js'
 
-export const pt_br = {
+export default {
   about,
   contact,
   general

@@ -1,8 +1,5 @@
 
 <script setup lang="ts">
-  import moment from 'moment';
-  import { useI18n } from 'vue-i18n'
-
   const { t } = useI18n()
   const listLength = ref(8)
 </script>
@@ -25,9 +22,9 @@
           <h4 class="font-italic font-weight-bold no-user-select text-secondary">{{ t(`about.experience.list[${index-1}].company`) }}</h4>
           <p class="font-italic no-user-select text-caption text-secondary">
             {{
-              moment(t(`about.experience.list[${index-1}].start`)).format('MMM YYYY')
+              t(`about.experience.list[${index-1}].start`)
             }} - {{
-              t(`about.experience.list[${index-1}].end`) ? moment(t(`about.experience.list[${index-1}].end`)).format('MMM YYYY') : t('general.present')
+              t(`about.experience.list[${index-1}].end`) ? t(`about.experience.list[${index-1}].end`) : t('general.present')
             }}
           </p>
         </v-col>
